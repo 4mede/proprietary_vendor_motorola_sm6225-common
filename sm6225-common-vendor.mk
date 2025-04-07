@@ -56,6 +56,7 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/sm6225-common/proprietary/vendor/etc/data/netmgr_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/data/netmgr_config.xml \
     vendor/motorola/sm6225-common/proprietary/vendor/etc/default-permissions/com.qualcomm.qti.cne.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default-permissions/com.qualcomm.qti.cne.xml \
     vendor/motorola/sm6225-common/proprietary/vendor/etc/gpfspath_oem_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gpfspath_oem_config.xml \
+    vendor/motorola/sm6225-common/proprietary/vendor/etc/init.qti.fm.sh:$(TARGET_COPY_OUT_VENDOR)/etc/init.qti.fm.sh \
     vendor/motorola/sm6225-common/proprietary/vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.bluetooth@1.0-service-qti.rc \
     vendor/motorola/sm6225-common/proprietary/vendor/etc/init/android.hardware.camera.provider@2.4-service_64-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.camera.provider@2.4-service_64-qti.rc \
     vendor/motorola/sm6225-common/proprietary/vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.drm@1.3-service.widevine.rc \
@@ -68,6 +69,7 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/sm6225-common/proprietary/vendor/etc/init/ims_rtp_daemon.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/ims_rtp_daemon.rc \
     vendor/motorola/sm6225-common/proprietary/vendor/etc/init/imsdaemon.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/imsdaemon.rc \
     vendor/motorola/sm6225-common/proprietary/vendor/etc/init/init-qcril-data.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init-qcril-data.rc \
+    vendor/motorola/sm6225-common/proprietary/vendor/etc/init/init.qti.fm.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.qti.fm.rc \
     vendor/motorola/sm6225-common/proprietary/vendor/etc/init/init.time_daemon.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.time_daemon.rc \
     vendor/motorola/sm6225-common/proprietary/vendor/etc/init/init.vendor.sensors.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.vendor.sensors.rc \
     vendor/motorola/sm6225-common/proprietary/vendor/etc/init/ipa_fws.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/ipa_fws.rc \
@@ -179,31 +181,19 @@ PRODUCT_PACKAGES += \
     libc2d30_bltlib \
     libcdsprpc \
     libdiag \
-    libdsutils \
     libfastcvdsp_stub \
     libfastcvopt \
     libgpudataproducer \
     libgsl \
-    libidl \
     libllvm-glnext \
     libllvm-qcom \
-    libmdmdetect \
     libperfconfig \
     libperfgluelayer \
     libperfioctl \
-    libqdi \
-    libqdp \
-    libqmi \
-    libqmi_cci \
-    libqmi_client_helper \
-    libqmi_client_qmux \
-    libqmi_common_so \
-    libqmi_csi \
-    libqmi_encdec \
-    libqmiservices \
     libqti-perfd-client \
     libqti-perfd \
     libqti-util \
+    libril \
     libscveCommon \
     libscveCommon_stub \
     libscveObjectSegmentation \
@@ -298,7 +288,9 @@ PRODUCT_PACKAGES += \
     libdrmfs \
     libdrmtime \
     libdsi_netctrl \
+    libdsutils \
     libhdr_tm \
+    libidl \
     libizat_client_api \
     libizat_core \
     libkeymasterdeviceutils \
@@ -313,6 +305,7 @@ PRODUCT_PACKAGES += \
     liblowi_client \
     liblqe \
     libmdmcutback \
+    libmdmdetect \
     libmdsprpc \
     libmeters \
     libminkdescriptor \
@@ -334,8 +327,18 @@ PRODUCT_PACKAGES += \
     libqcrilFramework \
     libqcrildatactl \
     libqcrildataqos \
+    libqdi \
+    libqdp \
     libqisl \
+    libqmi \
+    libqmi_cci \
+    libqmi_client_helper \
+    libqmi_client_qmux \
+    libqmi_common_so \
+    libqmi_csi \
+    libqmi_encdec \
     libqmimotext \
+    libqmiservices \
     libqrtr \
     libqseed3 \
     libqsocket \
@@ -376,6 +379,7 @@ PRODUCT_PACKAGES += \
     libwvhidl \
     libxml \
     libxtadapter \
+    motorola.hardware.fmradio@1.0 \
     qcrilHalMarshal \
     qcrild_librilutils \
     qtibus \
@@ -520,6 +524,8 @@ PRODUCT_PACKAGES += \
     IWlanService \
     TimeService \
     uimgbaservice \
+    FMPlayer \
+    FMRadioService \
     ImsRcsService \
     QtiTelephonyService \
     dpmserviceapp \
@@ -555,6 +561,7 @@ PRODUCT_PACKAGES += \
     android.hardware.drm@1.3-service.widevine \
     android.hardware.gatekeeper@1.0-service-qti \
     android.hardware.keymaster@4.1-service-qti \
+    motorola.hardware.fmradio@1.0-service \
     qcrild \
     vendor.display.color@1.0-service \
     vendor.qti.hardware.alarm@1.0-service \
