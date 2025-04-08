@@ -193,7 +193,6 @@ PRODUCT_PACKAGES += \
     libqti-perfd-client \
     libqti-perfd \
     libqti-util \
-    libril \
     libscveCommon \
     libscveCommon_stub \
     libscveObjectSegmentation \
