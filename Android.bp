@@ -5,13 +5,17 @@
 soong_namespace {
     imports: [
         "device/motorola/sm6225-common",
-        "vendor/qcom/opensource/dataservices",
-        "vendor/qcom/common/system/display",
-        "vendor/qcom/common/system/perf",
-        "vendor/qcom/common/vendor/gps-legacy",
-        "vendor/qcom/common/vendor/display/4.19",
+        "hardware/qcom/display",
+        "hardware/qcom/display/gralloc",
+        "hardware/qcom/display/libdebug",
+        "hardware/qcom/display/sde-drm",
+        "hardware/motorola",
         "vendor/qcom/common/vendor/display",
+        "vendor/qcom/common/vendor/display/4.19",
+        "vendor/qcom/common/vendor/gps-legacy",
         "vendor/qcom/common/vendor/keymaster",
+        "vendor/qcom/common/vendor/wlan-legacy",
+        "vendor/qcom/common/vendor/media/legacy",
     ],
 }
 
@@ -459,6 +463,371 @@ cc_prebuilt_library_shared {
                 "vendor.qti.hardware.display.mapperextensions@1.0",
                 "vendor.qti.hardware.display.mapperextensions@1.1",
                 "libhidlbase",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libOmxAacDec",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libOmxAacDec.so",
+            ],
+            shared_libs: [
+                "libutils",
+                "liblog",
+                "libion",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libOmxAacDec.so",
+            ],
+            shared_libs: [
+                "libutils",
+                "liblog",
+                "libion",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libOmxAlacDec",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libOmxAlacDec.so",
+            ],
+            shared_libs: [
+                "libutils",
+                "liblog",
+                "libion",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libOmxAlacDec.so",
+            ],
+            shared_libs: [
+                "libutils",
+                "liblog",
+                "libion",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libOmxAmrDec",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libOmxAmrDec.so",
+            ],
+            shared_libs: [
+                "libutils",
+                "liblog",
+                "libion",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libOmxAmrDec.so",
+            ],
+            shared_libs: [
+                "libutils",
+                "liblog",
+                "libion",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libOmxAmrwbplusDec",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libOmxAmrwbplusDec.so",
+            ],
+            shared_libs: [
+                "libutils",
+                "liblog",
+                "libion",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libOmxAmrwbplusDec.so",
+            ],
+            shared_libs: [
+                "libutils",
+                "liblog",
+                "libion",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libOmxApeDec",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libOmxApeDec.so",
+            ],
+            shared_libs: [
+                "libutils",
+                "liblog",
+                "libion",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libOmxApeDec.so",
+            ],
+            shared_libs: [
+                "libutils",
+                "liblog",
+                "libion",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libOmxEvrcDec",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libOmxEvrcDec.so",
+            ],
+            shared_libs: [
+                "libutils",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libOmxEvrcDec.so",
+            ],
+            shared_libs: [
+                "libutils",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libOmxG711Dec",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libOmxG711Dec.so",
+            ],
+            shared_libs: [
+                "libutils",
+                "liblog",
+                "libion",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libOmxG711Dec.so",
+            ],
+            shared_libs: [
+                "libutils",
+                "liblog",
+                "libion",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libOmxQcelp13Dec",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libOmxQcelp13Dec.so",
+            ],
+            shared_libs: [
+                "libutils",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libOmxQcelp13Dec.so",
+            ],
+            shared_libs: [
+                "libutils",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libOmxWmaDec",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libOmxWmaDec.so",
+            ],
+            shared_libs: [
+                "libutils",
+                "liblog",
+                "libion",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libOmxWmaDec.so",
+            ],
+            shared_libs: [
+                "libutils",
+                "liblog",
+                "libion",
                 "libc++",
                 "libc",
                 "libm",
@@ -1075,7 +1444,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libqdi",
+    name: "libmm-hdcpmgr",
     owner: "motorola",
     strip: {
         none: true,
@@ -1083,17 +1452,53 @@ cc_prebuilt_library_shared {
     target: {
         android_arm: {
             srcs: [
-                "proprietary/vendor/lib/libqdi.so",
+                "proprietary/vendor/lib/libmm-hdcpmgr.so",
             ],
             shared_libs: [
-                "libdiag",
-                "libdsutils",
-                "libqmiservices",
-                "libqmi_cci",
-                "libqmi_common_so",
-                "libqmi_client_qmux",
-                "libqmi_client_helper",
-                "libqmi",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libmm-hdcpmgr.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmmosal_vendor",
+    stem: "libmmosal",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libmmosal.so",
+            ],
+            shared_libs: [
+                "libutils",
+                "libcutils",
                 "liblog",
                 "libc++",
                 "libc",
@@ -1103,17 +1508,11 @@ cc_prebuilt_library_shared {
         },
         android_arm64: {
             srcs: [
-                "proprietary/vendor/lib64/libqdi.so",
+                "proprietary/vendor/lib64/libmmosal.so",
             ],
             shared_libs: [
-                "libdiag",
-                "libdsutils",
-                "libqmiservices",
-                "libqmi_cci",
-                "libqmi_common_so",
-                "libqmi_client_qmux",
-                "libqmi_client_helper",
-                "libqmi",
+                "libutils",
+                "libcutils",
                 "liblog",
                 "libc++",
                 "libc",
@@ -1128,7 +1527,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libqdp",
+    name: "libqcci_legacy",
     owner: "motorola",
     strip: {
         none: true,
@@ -1136,16 +1535,15 @@ cc_prebuilt_library_shared {
     target: {
         android_arm: {
             srcs: [
-                "proprietary/vendor/lib/libqdp.so",
+                "proprietary/vendor/lib/libqcci_legacy.so",
             ],
             shared_libs: [
-                "libdiag",
-                "libdsutils",
                 "libcutils",
-                "libqmiservices",
-                "libqmi_cci",
-                "libqmi_common_so",
-                "libqmi_client_helper",
+                "libdiag",
+                "libidl",
+                "libqmi_client_qmux",
+                "libqmi_legacy",
+                "liblog",
                 "libc++",
                 "libc",
                 "libm",
@@ -1154,16 +1552,15 @@ cc_prebuilt_library_shared {
         },
         android_arm64: {
             srcs: [
-                "proprietary/vendor/lib64/libqdp.so",
+                "proprietary/vendor/lib64/libqcci_legacy.so",
             ],
             shared_libs: [
-                "libdiag",
-                "libdsutils",
                 "libcutils",
-                "libqmiservices",
-                "libqmi_cci",
-                "libqmi_common_so",
-                "libqmi_client_helper",
+                "libdiag",
+                "libidl",
+                "libqmi_client_qmux",
+                "libqmi_legacy",
+                "liblog",
                 "libc++",
                 "libc",
                 "libm",
@@ -1449,6 +1846,55 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libqmi_csvt_srvc",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libqmi_csvt_srvc.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "libdiag",
+                "libqmi_legacy",
+                "libqmiservices",
+                "libqcci_legacy",
+                "libqmi_client_qmux",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libqmi_csvt_srvc.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "libdiag",
+                "libqmi_legacy",
+                "libqmiservices",
+                "libqcci_legacy",
+                "libqmi_client_qmux",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libqmi_encdec",
     owner: "motorola",
     strip: {
@@ -1475,6 +1921,55 @@ cc_prebuilt_library_shared {
             shared_libs: [
                 "libcutils",
                 "libutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libqmi_legacy",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libqmi_legacy.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "libqmi_client_qmux",
+                "libdiag",
+                "libdsutils",
+                "libqmiservices",
+                "libidl",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libqmi_legacy.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "libqmi_client_qmux",
+                "libdiag",
+                "libdsutils",
+                "libqmiservices",
+                "libidl",
+                "liblog",
                 "libc++",
                 "libc",
                 "libm",
@@ -1525,7 +2020,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libscveCommon",
+    name: "libqsocket",
     owner: "motorola",
     strip: {
         none: true,
@@ -1533,13 +2028,9 @@ cc_prebuilt_library_shared {
     target: {
         android_arm: {
             srcs: [
-                "proprietary/vendor/lib/libscveCommon.so",
+                "proprietary/vendor/lib/libqsocket.so",
             ],
             shared_libs: [
-                "liblog",
-                "libion",
-                "libscveCommon_stub",
-                "libcdsprpc",
                 "libc++",
                 "libc",
                 "libm",
@@ -1548,13 +2039,9 @@ cc_prebuilt_library_shared {
         },
         android_arm64: {
             srcs: [
-                "proprietary/vendor/lib64/libscveCommon.so",
+                "proprietary/vendor/lib64/libqsocket.so",
             ],
             shared_libs: [
-                "liblog",
-                "libion",
-                "libscveCommon_stub",
-                "libcdsprpc",
                 "libc++",
                 "libc",
                 "libm",
@@ -1568,7 +2055,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libscveCommon_stub",
+    name: "libsmemlog",
     owner: "motorola",
     strip: {
         none: true,
@@ -1576,10 +2063,9 @@ cc_prebuilt_library_shared {
     target: {
         android_arm: {
             srcs: [
-                "proprietary/vendor/lib/libscveCommon_stub.so",
+                "proprietary/vendor/lib/libsmemlog.so",
             ],
             shared_libs: [
-                "libcdsprpc",
                 "libc++",
                 "libc",
                 "libm",
@@ -1588,10 +2074,9 @@ cc_prebuilt_library_shared {
         },
         android_arm64: {
             srcs: [
-                "proprietary/vendor/lib64/libscveCommon_stub.so",
+                "proprietary/vendor/lib64/libsmemlog.so",
             ],
             shared_libs: [
-                "libcdsprpc",
                 "libc++",
                 "libc",
                 "libm",
@@ -1605,7 +2090,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libscveObjectSegmentation",
+    name: "libsystem_health_mon",
     owner: "motorola",
     strip: {
         none: true,
@@ -1613,12 +2098,12 @@ cc_prebuilt_library_shared {
     target: {
         android_arm: {
             srcs: [
-                "proprietary/vendor/lib/libscveObjectSegmentation.so",
+                "proprietary/vendor/lib/libsystem_health_mon.so",
             ],
             shared_libs: [
+                "libcutils",
+                "libutils",
                 "liblog",
-                "libfastcvopt",
-                "libscveCommon",
                 "libc++",
                 "libc",
                 "libm",
@@ -1627,137 +2112,12 @@ cc_prebuilt_library_shared {
         },
         android_arm64: {
             srcs: [
-                "proprietary/vendor/lib64/libscveObjectSegmentation.so",
+                "proprietary/vendor/lib64/libsystem_health_mon.so",
             ],
             shared_libs: [
+                "libcutils",
+                "libutils",
                 "liblog",
-                "libfastcvopt",
-                "libscveCommon",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "both",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libscveObjectSegmentation_stub",
-    owner: "motorola",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libscveObjectSegmentation_stub.so",
-            ],
-            shared_libs: [
-                "libscveCommon",
-                "libcdsprpc",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libscveObjectSegmentation_stub.so",
-            ],
-            shared_libs: [
-                "libscveCommon",
-                "libcdsprpc",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "both",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libscveObjectTracker",
-    owner: "motorola",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libscveObjectTracker.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libfastcvopt",
-                "libscveCommon",
-                "libscveObjectSegmentation",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libscveObjectTracker.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libfastcvopt",
-                "libscveCommon",
-                "libscveObjectSegmentation",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "both",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libscveObjectTracker_stub",
-    owner: "motorola",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libscveObjectTracker_stub.so",
-            ],
-            shared_libs: [
-                "libfastcvopt",
-                "liblog",
-                "libscveCommon",
-                "libcdsprpc",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libscveObjectTracker_stub.so",
-            ],
-            shared_libs: [
-                "libfastcvopt",
-                "liblog",
-                "libscveCommon",
-                "libcdsprpc",
                 "libc++",
                 "libc",
                 "libm",
@@ -1946,6 +2306,61 @@ cc_prebuilt_library_shared {
     },
     compile_multilib: "32",
     relative_install_path: "hw",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libFileMux_proprietary",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libFileMux_proprietary.so",
+            ],
+            shared_libs: [
+                "libmmosal_vendor",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libOmxDsdDec",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libOmxDsdDec.so",
+            ],
+            shared_libs: [
+                "libutils",
+                "liblog",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
     prefer: true,
     soc_specific: true,
 }
@@ -2266,6 +2681,31 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libdsd2pcm",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libdsd2pcm.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libgcs-calwrapper",
     owner: "motorola",
     strip: {
@@ -2398,6 +2838,62 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libmmrtpdecoder_proprietary",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libmmrtpdecoder_proprietary.so",
+            ],
+            shared_libs: [
+                "libutils",
+                "liblog",
+                "libcutils",
+                "libmmosal_vendor",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmmrtpencoder_proprietary",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libmmrtpencoder_proprietary.so",
+            ],
+            shared_libs: [
+                "libmmosal_vendor",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libmulawdec",
     owner: "motorola",
     strip: {
@@ -2435,6 +2931,633 @@ cc_prebuilt_library_shared {
             shared_libs: [
                 "liblog",
                 "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libwfdcodecv4l2_proprietary",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libwfdcodecv4l2_proprietary.so",
+            ],
+            shared_libs: [
+                "libmmosal_vendor",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libwfdcommonutils_proprietary",
+                "libwfdmminterface_proprietary",
+                "libwfdutils_proprietary",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libwfdcommonutils_proprietary",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libwfdcommonutils_proprietary.so",
+            ],
+            shared_libs: [
+                "libmmosal_vendor",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libion",
+                "libprocessgroup",
+                "libwfddisplayconfig_proprietary",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libwfdconfigutils_proprietary",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libwfdconfigutils_proprietary.so",
+            ],
+            shared_libs: [
+                "libmmosal_vendor",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libbinder",
+                "libnl",
+                "libwfdmminterface_proprietary",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libwfddisplayconfig_proprietary",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libwfddisplayconfig_proprietary.so",
+            ],
+            shared_libs: [
+                "libhidlbase",
+                "libutils",
+                "libcutils",
+                "liblog",
+                "vendor.display.config@2.0",
+                "libdisplayconfig.qti",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libwfdhdcpcp",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libwfdhdcpcp.so",
+            ],
+            shared_libs: [
+                "libmmosal_vendor",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libwfdhdcpservice_proprietary",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libwfdhdcpservice_proprietary.so",
+            ],
+            shared_libs: [
+                "libmmosal_vendor",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libbinder",
+                "libwfdhdcpcp",
+                "libc++",
+                "libclang_rt.ubsan_standalone",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libwfdmminterface_proprietary",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libwfdmminterface_proprietary.so",
+            ],
+            shared_libs: [
+                "libmmosal_vendor",
+                "liblog",
+                "libutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libwfdmmservice_proprietary",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libwfdmmservice_proprietary.so",
+            ],
+            shared_libs: [
+                "libmmosal_vendor",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libbinder",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libwfdmmsrc_proprietary",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libwfdmmsrc_proprietary.so",
+            ],
+            shared_libs: [
+                "libbinder",
+                "libmmosal_vendor",
+                "liblog",
+                "libutils",
+                "libmmrtpencoder_proprietary",
+                "libFileMux_proprietary",
+                "libcutils",
+                "libtinyalsa",
+                "libwfdcommonutils_proprietary",
+                "libwfdutils_proprietary",
+                "libwfdconfigutils_proprietary",
+                "libwfdaac_vendor",
+                "libpng",
+                "libwfdmminterface_proprietary",
+                "libwfdcodecv4l2_proprietary",
+                "libwfdmmservice_proprietary",
+                "libhidlbase",
+                "android.hardware.graphics.mapper@2.0",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libwfdmodulehdcpsession",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libwfdmodulehdcpsession.so",
+            ],
+            shared_libs: [
+                "libmmosal_vendor",
+                "liblog",
+                "libutils",
+                "libwfdhdcpcp",
+                "libwfdcommonutils_proprietary",
+                "libhidlbase",
+                "libwfdutils_proprietary",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libwfdrtsp_proprietary",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libwfdrtsp_proprietary.so",
+            ],
+            shared_libs: [
+                "libc++",
+                "libcutils",
+                "libutils",
+                "libmmosal_vendor",
+                "libwfdcommonutils_proprietary",
+                "libwfdconfigutils_proprietary",
+                "liblog",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libwfdsessionmodule",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libwfdsessionmodule.so",
+            ],
+            shared_libs: [
+                "libmmosal_vendor",
+                "liblog",
+                "libutils",
+                "libwfdsourcesession_proprietary",
+                "vendor.qti.hardware.wifidisplaysession@1.0_vendor",
+                "libwfdcommonutils_proprietary",
+                "libhidlbase",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libwfdsourcesession_proprietary",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libwfdsourcesession_proprietary.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libbinder",
+                "libmmosal_vendor",
+                "libwfdcommonutils_proprietary",
+                "libwfdconfigutils_proprietary",
+                "libwfdmminterface_proprietary",
+                "libmedia_helper",
+                "libwfdmmsrc_proprietary",
+                "libqdMetaData",
+                "libhidlbase",
+                "libwfdsourcesm_proprietary",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libwfdsourcesm_proprietary",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libwfdsourcesm_proprietary.so",
+            ],
+            shared_libs: [
+                "libc++",
+                "libcutils",
+                "libutils",
+                "libwfdrtsp_proprietary",
+                "libmmrtpencoder_proprietary",
+                "libmmrtpdecoder_proprietary",
+                "libwfduibcinterface_proprietary",
+                "libwfdmmsrc_proprietary",
+                "libmmosal_vendor",
+                "libwfdcommonutils_proprietary",
+                "libwfdconfigutils_proprietary",
+                "libqdMetaData",
+                "libwfdmminterface_proprietary",
+                "libwfdmodulehdcpsession",
+                "libhidlbase",
+                "libwfddisplayconfig_proprietary",
+                "liblog",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libwfduibcinterface_proprietary",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libwfduibcinterface_proprietary.so",
+            ],
+            shared_libs: [
+                "libmmosal_vendor",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libwfduibcsrcinterface_proprietary",
+                "libwfduibcsinkinterface_proprietary",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libwfduibcsink_proprietary",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libwfduibcsink_proprietary.so",
+            ],
+            shared_libs: [
+                "libmmosal_vendor",
+                "libutils",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libwfduibcsinkinterface_proprietary",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libwfduibcsinkinterface_proprietary.so",
+            ],
+            shared_libs: [
+                "libmmosal_vendor",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libwfduibcsink_proprietary",
+                "libwfdcommonutils_proprietary",
+                "libwfdconfigutils_proprietary",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libwfduibcsrc_proprietary",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libwfduibcsrc_proprietary.so",
+            ],
+            shared_libs: [
+                "libmmosal_vendor",
+                "libwfdcommonutils_proprietary",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libwfdconfigutils_proprietary",
+                "libwfddisplayconfig_proprietary",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libwfduibcsrcinterface_proprietary",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libwfduibcsrcinterface_proprietary.so",
+            ],
+            shared_libs: [
+                "libmmosal_vendor",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libwfduibcsrc_proprietary",
+                "libwfdcommonutils_proprietary",
+                "libwfdconfigutils_proprietary",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libwfdutils_proprietary",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libwfdutils_proprietary.so",
+            ],
+            shared_libs: [
+                "libmmosal_vendor",
+                "liblog",
+                "libion",
                 "libc++",
                 "libc",
                 "libm",
@@ -2502,6 +3625,66 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "vendor.qti.hardware.wifidisplaysession@1.0_vendor",
+    stem: "vendor.qti.hardware.wifidisplaysession@1.0",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/vendor.qti.hardware.wifidisplaysession@1.0.so",
+            ],
+            shared_libs: [
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.qti.hardware.wifidisplaysessionl@1.0-halimpl",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/vendor.qti.hardware.wifidisplaysessionl@1.0-halimpl.so",
+            ],
+            shared_libs: [
+                "libhidlbase",
+                "libutils",
+                "libcutils",
+                "vendor.qti.hardware.wifidisplaysession@1.0_vendor",
+                "libwfdsessionmodule",
+                "liblog",
+                "libwfdcommonutils_proprietary",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "com.qualcomm.qti.dpm.api@1.0_vendor",
     stem: "com.qualcomm.qti.dpm.api@1.0",
     owner: "motorola",
@@ -2531,7 +3714,36 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "com.qualcomm.qti.imscmservice@2.0",
+    name: "com.qualcomm.qti.imscmservice@1.0",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/com.qualcomm.qti.imscmservice@1.0.so",
+            ],
+            shared_libs: [
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qualcomm.qti.imscmservice@2.0_vendor",
+    stem: "com.qualcomm.qti.imscmservice@2.0",
     owner: "motorola",
     strip: {
         none: true,
@@ -2559,7 +3771,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "com.qualcomm.qti.imscmservice@2.1",
+    name: "com.qualcomm.qti.imscmservice@2.1_vendor",
+    stem: "com.qualcomm.qti.imscmservice@2.1",
     owner: "motorola",
     strip: {
         none: true,
@@ -2570,7 +3783,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/com.qualcomm.qti.imscmservice@2.1.so",
             ],
             shared_libs: [
-                "com.qualcomm.qti.imscmservice@2.0",
+                "com.qualcomm.qti.imscmservice@2.0_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -2588,7 +3801,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "com.qualcomm.qti.imscmservice@2.2",
+    name: "com.qualcomm.qti.imscmservice@2.2_vendor",
+    stem: "com.qualcomm.qti.imscmservice@2.2",
     owner: "motorola",
     strip: {
         none: true,
@@ -2599,8 +3813,8 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/com.qualcomm.qti.imscmservice@2.2.so",
             ],
             shared_libs: [
-                "com.qualcomm.qti.imscmservice@2.0",
-                "com.qualcomm.qti.imscmservice@2.1",
+                "com.qualcomm.qti.imscmservice@2.0_vendor",
+                "com.qualcomm.qti.imscmservice@2.1_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -2618,7 +3832,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "com.qualcomm.qti.uceservice@2.0",
+    name: "com.qualcomm.qti.uceservice@2.0_vendor",
+    stem: "com.qualcomm.qti.uceservice@2.0",
     owner: "motorola",
     strip: {
         none: true,
@@ -2646,7 +3861,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "com.qualcomm.qti.uceservice@2.1",
+    name: "com.qualcomm.qti.uceservice@2.1_vendor",
+    stem: "com.qualcomm.qti.uceservice@2.1",
     owner: "motorola",
     strip: {
         none: true,
@@ -2657,7 +3873,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/com.qualcomm.qti.uceservice@2.1.so",
             ],
             shared_libs: [
-                "com.qualcomm.qti.uceservice@2.0",
+                "com.qualcomm.qti.uceservice@2.0_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -2675,7 +3891,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "com.qualcomm.qti.uceservice@2.2",
+    name: "com.qualcomm.qti.uceservice@2.2_vendor",
+    stem: "com.qualcomm.qti.uceservice@2.2",
     owner: "motorola",
     strip: {
         none: true,
@@ -2686,8 +3903,8 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/com.qualcomm.qti.uceservice@2.2.so",
             ],
             shared_libs: [
-                "com.qualcomm.qti.uceservice@2.0",
-                "com.qualcomm.qti.uceservice@2.1",
+                "com.qualcomm.qti.uceservice@2.0_vendor",
+                "com.qualcomm.qti.uceservice@2.1_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -2705,7 +3922,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "com.qualcomm.qti.uceservice@2.3",
+    name: "com.qualcomm.qti.uceservice@2.3_vendor",
+    stem: "com.qualcomm.qti.uceservice@2.3",
     owner: "motorola",
     strip: {
         none: true,
@@ -2716,9 +3934,9 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/com.qualcomm.qti.uceservice@2.3.so",
             ],
             shared_libs: [
-                "com.qualcomm.qti.uceservice@2.0",
-                "com.qualcomm.qti.uceservice@2.1",
-                "com.qualcomm.qti.uceservice@2.2",
+                "com.qualcomm.qti.uceservice@2.0_vendor",
+                "com.qualcomm.qti.uceservice@2.1_vendor",
+                "com.qualcomm.qti.uceservice@2.2_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -2747,7 +3965,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/deviceInfoServiceModule.so",
             ],
             shared_libs: [
-                "vendor.qti.hardware.radio.internal.deviceinfo@1.0",
+                "vendor.qti.hardware.radio.internal.deviceinfo@1.0_vendor",
                 "libqcrilFramework",
                 "libril-qc-hal-qmi",
                 "libril-qc-logger",
@@ -2856,6 +4074,38 @@ cc_prebuilt_library_shared {
                 "libcutils",
                 "vendor.qti.hardware.bluetooth_sar@1.0",
                 "vendor.qti.hardware.bluetooth_sar@1.1",
+                "android.hardware.bluetooth@1.0-impl-qti",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    relative_install_path: "hw",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.qti.hardware.btconfigstore@1.0-impl",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so",
+            ],
+            shared_libs: [
+                "libbase",
+                "libcutils",
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "vendor.qti.hardware.btconfigstore@1.0",
                 "android.hardware.bluetooth@1.0-impl-qti",
                 "libc++",
                 "libc",
@@ -3039,39 +4289,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.sensorscalibrate@1.0-impl",
-    owner: "motorola",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/hw/vendor.qti.hardware.sensorscalibrate@1.0-impl.so",
-            ],
-            shared_libs: [
-                "libhidlbase",
-                "libutils",
-                "liblog",
-                "libcutils",
-                "libhardware",
-                "libbase",
-                "vendor.qti.hardware.sensorscalibrate@1.0",
-                "libsensorcal",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    relative_install_path: "hw",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "vendor.qti.hardware.soter@1.0-impl",
     owner: "motorola",
     strip: {
@@ -3134,11 +4351,11 @@ cc_prebuilt_library_shared {
                 "libdiag",
                 "libqmi_common_so",
                 "libcneapiclient",
-                "vendor.qti.ims.factory@1.0",
-                "vendor.qti.ims.factory@1.1",
-                "vendor.qti.ims.factory@2.0",
-                "vendor.qti.ims.factory@2.1",
-                "vendor.qti.ims.factory@2.2",
+                "vendor.qti.ims.factory@1.0_vendor",
+                "vendor.qti.ims.factory@1.1_vendor",
+                "vendor.qti.ims.factory@2.0_vendor",
+                "vendor.qti.ims.factory@2.1_vendor",
+                "vendor.qti.ims.factory@2.2_vendor",
                 "libnetutils",
                 "libz",
                 "libc++",
@@ -3242,23 +4459,23 @@ cc_prebuilt_library_shared {
                 "libhidlbase",
                 "libqmiservices",
                 "libqmi_encdec",
-                "com.qualcomm.qti.uceservice@2.0",
-                "com.qualcomm.qti.uceservice@2.1",
-                "com.qualcomm.qti.uceservice@2.2",
-                "com.qualcomm.qti.uceservice@2.3",
-                "com.qualcomm.qti.imscmservice@2.0",
-                "com.qualcomm.qti.imscmservice@2.1",
-                "com.qualcomm.qti.imscmservice@2.2",
-                "vendor.qti.ims.rcssip@1.0",
-                "vendor.qti.ims.connection@1.0",
-                "vendor.qti.ims.factory@2.0",
-                "vendor.qti.ims.rcsuce@1.0",
-                "vendor.qti.ims.factory@2.1",
-                "vendor.qti.ims.rcsuce@1.1",
-                "vendor.qti.ims.rcssip@1.1",
-                "vendor.qti.ims.factory@2.2",
-                "vendor.qti.ims.rcsuce@1.2",
-                "vendor.qti.ims.rcssip@1.2",
+                "com.qualcomm.qti.uceservice@2.0_vendor",
+                "com.qualcomm.qti.uceservice@2.1_vendor",
+                "com.qualcomm.qti.uceservice@2.2_vendor",
+                "com.qualcomm.qti.uceservice@2.3_vendor",
+                "com.qualcomm.qti.imscmservice@2.0_vendor",
+                "com.qualcomm.qti.imscmservice@2.1_vendor",
+                "com.qualcomm.qti.imscmservice@2.2_vendor",
+                "vendor.qti.ims.rcssip@1.0_vendor",
+                "vendor.qti.ims.connection@1.0_vendor",
+                "vendor.qti.ims.factory@2.0_vendor",
+                "vendor.qti.ims.rcsuce@1.0_vendor",
+                "vendor.qti.ims.factory@2.1_vendor",
+                "vendor.qti.ims.rcsuce@1.1_vendor",
+                "vendor.qti.ims.rcssip@1.1_vendor",
+                "vendor.qti.ims.factory@2.2_vendor",
+                "vendor.qti.ims.rcsuce@1.2_vendor",
+                "vendor.qti.ims.rcssip@1.2_vendor",
                 "libc++",
                 "libc",
                 "libm",
@@ -3296,17 +4513,17 @@ cc_prebuilt_library_shared {
                 "libidl",
                 "libqti_vndfwk_detect",
                 "libandroid_net",
-                "vendor.qti.ims.callinfo@1.0",
-                "vendor.qti.ims.rcsconfig@2.0",
-                "vendor.qti.ims.rcsconfig@2.1",
-                "vendor.qti.ims.factory@1.0",
-                "vendor.qti.ims.factory@1.1",
-                "vendor.qti.ims.callcapability@1.0",
-                "vendor.qti.ims.configservice@1.0",
-                "vendor.qti.ims.factory@2.0",
-                "vendor.qti.ims.factory@2.1",
-                "vendor.qti.ims.factory@2.2",
-                "vendor.qti.ims.configservice@1.1",
+                "vendor.qti.ims.callinfo@1.0_vendor",
+                "vendor.qti.ims.rcsconfig@2.0_vendor",
+                "vendor.qti.ims.rcsconfig@2.1_vendor",
+                "vendor.qti.ims.factory@1.0_vendor",
+                "vendor.qti.ims.factory@1.1_vendor",
+                "vendor.qti.ims.callcapability@1.0_vendor",
+                "vendor.qti.ims.configservice@1.0_vendor",
+                "vendor.qti.ims.factory@2.0_vendor",
+                "vendor.qti.ims.factory@2.1_vendor",
+                "vendor.qti.ims.factory@2.2_vendor",
+                "vendor.qti.ims.configservice@1.1_vendor",
                 "libc++",
                 "libc",
                 "libm",
@@ -3918,24 +5135,24 @@ cc_prebuilt_library_shared {
                 "libhidlbase",
                 "libnl",
                 "libidl",
-                "vendor.qti.hardware.data.cne.internal.server@1.0",
-                "vendor.qti.hardware.data.cne.internal.api@1.0",
-                "vendor.qti.hardware.data.cne.internal.constants@1.0",
-                "vendor.qti.hardware.data.latency@1.0",
-                "vendor.qti.hardware.data.lce@1.0",
+                "vendor.qti.hardware.data.cne.internal.server@1.0_vendor",
+                "vendor.qti.hardware.data.cne.internal.api@1.0_vendor",
+                "vendor.qti.hardware.data.cne.internal.constants@1.0_vendor",
+                "vendor.qti.hardware.data.latency@1.0_vendor",
+                "vendor.qti.hardware.data.lce@1.0_vendor",
                 "libandroid_net",
-                "vendor.qti.data.factory@2.0",
-                "vendor.qti.data.factory@2.1",
-                "vendor.qti.data.factory@2.2",
-                "vendor.qti.data.factory@2.3",
-                "vendor.qti.hardware.data.qmi@1.0",
-                "vendor.qti.hardware.data.dynamicdds@1.0",
-                "vendor.qti.ims.rcsconfig@1.0",
-                "vendor.qti.ims.rcsconfig@1.1",
-                "vendor.qti.latency@2.0",
-                "vendor.qti.latency@2.1",
-                "vendor.qti.hardware.mwqemadapter@1.0",
-                "vendor.qti.data.mwqem@1.0",
+                "vendor.qti.data.factory@2.0_vendor",
+                "vendor.qti.data.factory@2.1_vendor",
+                "vendor.qti.data.factory@2.2_vendor",
+                "vendor.qti.data.factory@2.3_vendor",
+                "vendor.qti.hardware.data.qmi@1.0_vendor",
+                "vendor.qti.hardware.data.dynamicdds@1.0_vendor",
+                "vendor.qti.ims.rcsconfig@1.0_vendor",
+                "vendor.qti.ims.rcsconfig@1.1_vendor",
+                "vendor.qti.latency@2.0_vendor",
+                "vendor.qti.latency@2.1_vendor",
+                "vendor.qti.hardware.mwqemadapter@1.0_vendor",
+                "vendor.qti.data.mwqem@1.0_vendor",
                 "libc++",
                 "libc",
                 "libm",
@@ -3967,10 +5184,10 @@ cc_prebuilt_library_shared {
                 "libdiag",
                 "liblog",
                 "libhidlbase",
-                "vendor.qti.hardware.data.cne.internal.api@1.0",
-                "vendor.qti.data.factory@2.0",
-                "vendor.qti.data.factory@2.1",
-                "vendor.qti.data.factory@2.2",
+                "vendor.qti.hardware.data.cne.internal.api@1.0_vendor",
+                "vendor.qti.data.factory@2.0_vendor",
+                "vendor.qti.data.factory@2.1_vendor",
+                "vendor.qti.data.factory@2.2_vendor",
                 "libandroid_net",
                 "libc++",
                 "libc",
@@ -3998,6 +5215,31 @@ cc_prebuilt_library_shared {
             shared_libs: [
                 "libcutils",
                 "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcneqmiutils",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libcneqmiutils.so",
+            ],
+            shared_libs: [
+                "libutils",
                 "libc++",
                 "libc",
                 "libm",
@@ -4254,6 +5496,97 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libembmsservice",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libembmsservice.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libutils",
+                "libhidlbase",
+                "vendor.qti.hardware.embmssl@1.0_vendor",
+                "libqmi",
+                "libqmi_client_helper",
+                "libqmi_cci",
+                "libqmiservices",
+                "libidl",
+                "libdsutils",
+                "libtime_genoff",
+                "libdiag",
+                "libdsi_netctrl",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libjnihelper",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libjnihelper.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "liblog",
+                "libqmiservices",
+                "libqmi_cci",
+                "libcacertclient",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libloadalgo_stub",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libloadalgo_stub.so",
+            ],
+            shared_libs: [
+                "libcdsprpc",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "liblog_vendor",
     owner: "motorola",
     strip: {
@@ -4294,11 +5627,11 @@ cc_prebuilt_library_shared {
                 "libdiag",
                 "libdsutils",
                 "libcutils",
-                "liblog",
                 "libqmiservices",
                 "libqmi_cci",
                 "libqmi_common_so",
                 "libqmi_client_helper",
+                "liblog",
                 "libc++",
                 "libc",
                 "libm",
@@ -4430,6 +5763,32 @@ cc_prebuilt_library_shared {
     },
     compile_multilib: "64",
     check_elf_files: false,
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libnative-api",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libnative-api.so",
+            ],
+            shared_libs: [
+                "libminksocket",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
     prefer: true,
     soc_specific: true,
 }
@@ -4840,13 +6199,77 @@ cc_prebuilt_library_shared {
                 "libqcrilFramework",
                 "libqmi_cci",
                 "libqmiservices",
-                "vendor.qti.ims.factory@2.0",
-                "vendor.qti.ims.connection@1.0",
+                "vendor.qti.ims.factory@2.0_vendor",
+                "vendor.qti.ims.connection@1.0_vendor",
                 "libhidltransport",
                 "libhidlbase",
                 "libutils",
                 "libidl",
                 "libril-qc-hal-qmi",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libqdi",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libqdi.so",
+            ],
+            shared_libs: [
+                "libdiag",
+                "libdsutils",
+                "libqmiservices",
+                "libqmi_cci",
+                "libqmi_common_so",
+                "libqmi_client_qmux",
+                "libqmi_client_helper",
+                "libqmi",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libqdp",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libqdp.so",
+            ],
+            shared_libs: [
+                "libdiag",
+                "libdsutils",
+                "libcutils",
+                "libqmiservices",
+                "libqmi_cci",
+                "libqmi_common_so",
+                "libqmi_client_helper",
                 "libc++",
                 "libc",
                 "libm",
@@ -4911,30 +6334,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libqsocket",
-    owner: "motorola",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libqsocket.so",
-            ],
-            shared_libs: [
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "librcc",
     owner: "motorola",
     strip: {
@@ -4963,6 +6362,31 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "librcmask",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/librcmask.so",
+            ],
+            shared_libs: [
+                "libdisplaydebug",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libril-qc-hal-qmi",
     owner: "motorola",
     strip: {
@@ -4975,35 +6399,35 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "libhidlbase",
-                "vendor.qti.hardware.radio.ims@1.0",
-                "vendor.qti.hardware.radio.ims@1.1",
-                "vendor.qti.hardware.radio.ims@1.2",
-                "vendor.qti.hardware.radio.ims@1.3",
-                "vendor.qti.hardware.radio.ims@1.4",
-                "vendor.qti.hardware.radio.ims@1.5",
-                "vendor.qti.hardware.radio.ims@1.6",
-                "vendor.qti.hardware.radio.ims@1.7",
-                "vendor.qti.hardware.radio.am@1.0",
-                "vendor.qti.hardware.radio.qcrilhook@1.0",
-                "vendor.qti.hardware.radio.uim@1.0",
-                "vendor.qti.hardware.radio.uim@1.1",
-                "vendor.qti.hardware.radio.uim@1.2",
-                "vendor.qti.hardware.radio.uim_remote_server@1.0",
-                "vendor.qti.hardware.radio.uim_remote_client@1.0",
-                "vendor.qti.hardware.radio.uim_remote_client@1.1",
-                "vendor.qti.hardware.radio.uim_remote_client@1.2",
-                "vendor.qti.hardware.radio.lpa@1.0",
-                "vendor.qti.hardware.radio.lpa@1.1",
-                "vendor.qti.hardware.radio.lpa@1.2",
-                "vendor.qti.hardware.radio.qtiradio@1.0",
-                "vendor.qti.hardware.radio.qtiradio@2.0",
-                "vendor.qti.hardware.radio.qtiradio@2.1",
-                "vendor.qti.hardware.radio.qtiradio@2.2",
-                "vendor.qti.hardware.radio.qtiradio@2.3",
-                "vendor.qti.hardware.radio.qtiradio@2.4",
-                "vendor.qti.hardware.radio.qtiradio@2.5",
-                "vendor.qti.hardware.radio.qtiradio@2.6",
-                "vendor.qti.hardware.radio.qtiradio@2.7",
+                "vendor.qti.hardware.radio.ims@1.0_vendor",
+                "vendor.qti.hardware.radio.ims@1.1_vendor",
+                "vendor.qti.hardware.radio.ims@1.2_vendor",
+                "vendor.qti.hardware.radio.ims@1.3_vendor",
+                "vendor.qti.hardware.radio.ims@1.4_vendor",
+                "vendor.qti.hardware.radio.ims@1.5_vendor",
+                "vendor.qti.hardware.radio.ims@1.6_vendor",
+                "vendor.qti.hardware.radio.ims@1.7_vendor",
+                "vendor.qti.hardware.radio.am@1.0_vendor",
+                "vendor.qti.hardware.radio.qcrilhook@1.0_vendor",
+                "vendor.qti.hardware.radio.uim@1.0_vendor",
+                "vendor.qti.hardware.radio.uim@1.1_vendor",
+                "vendor.qti.hardware.radio.uim@1.2_vendor",
+                "vendor.qti.hardware.radio.uim_remote_server@1.0_vendor",
+                "vendor.qti.hardware.radio.uim_remote_client@1.0_vendor",
+                "vendor.qti.hardware.radio.uim_remote_client@1.1_vendor",
+                "vendor.qti.hardware.radio.uim_remote_client@1.2_vendor",
+                "vendor.qti.hardware.radio.lpa@1.0_vendor",
+                "vendor.qti.hardware.radio.lpa@1.1_vendor",
+                "vendor.qti.hardware.radio.lpa@1.2_vendor",
+                "vendor.qti.hardware.radio.qtiradio@1.0_vendor",
+                "vendor.qti.hardware.radio.qtiradio@2.0_vendor",
+                "vendor.qti.hardware.radio.qtiradio@2.1_vendor",
+                "vendor.qti.hardware.radio.qtiradio@2.2_vendor",
+                "vendor.qti.hardware.radio.qtiradio@2.3_vendor",
+                "vendor.qti.hardware.radio.qtiradio@2.4_vendor",
+                "vendor.qti.hardware.radio.qtiradio@2.5_vendor",
+                "vendor.qti.hardware.radio.qtiradio@2.6_vendor",
+                "vendor.qti.hardware.radio.qtiradio@2.7_vendor",
                 "android.hardware.radio@1.0",
                 "android.hardware.radio.config@1.0",
                 "android.hardware.radio.config@1.1",
@@ -5012,7 +6436,7 @@ cc_prebuilt_library_shared {
                 "android.hardware.secure_element@1.0",
                 "android.hardware.secure_element@1.1",
                 "android.hardware.secure_element@1.2",
-                "vendor.qti.hardware.radio.internal.deviceinfo@1.0",
+                "vendor.qti.hardware.radio.internal.deviceinfo@1.0_vendor",
                 "libdsutils",
                 "libcutils",
                 "liblog",
@@ -5049,7 +6473,7 @@ cc_prebuilt_library_shared {
                 "libxml",
                 "qtibus",
                 "qcrilHalMarshal",
-                "libjson",
+                "libbinder_ndk",
                 "libsystem_health_mon",
                 "libpdmapper",
                 "libpdnotifier",
@@ -5057,12 +6481,9 @@ cc_prebuilt_library_shared {
                 "libdsi_netctrl",
                 "libqdp",
                 "liblqe",
-                "vendor.qti.hardware.data.iwlan@1.0",
-                "vendor.qti.hardware.data.connection@1.0",
-                "vendor.qti.hardware.data.connection@1.1",
-                "libmotext_inf",
-                "liblog_vendor",
-                "libril-qcril-hook-oem",
+                "vendor.qti.hardware.data.iwlan@1.0_vendor",
+                "vendor.qti.hardware.data.connection@1.0_vendor",
+                "vendor.qti.hardware.data.connection@1.1_vendor",
                 "libc++",
                 "libc",
                 "libm",
@@ -5231,6 +6652,168 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libscveCommon",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libscveCommon.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libion",
+                "libscveCommon_stub",
+                "libcdsprpc",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libscveCommon_stub",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libscveCommon_stub.so",
+            ],
+            shared_libs: [
+                "libcdsprpc",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libscveObjectSegmentation",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libscveObjectSegmentation.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libfastcvopt",
+                "libscveCommon",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libscveObjectSegmentation_stub",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libscveObjectSegmentation_stub.so",
+            ],
+            shared_libs: [
+                "libscveCommon",
+                "libcdsprpc",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libscveObjectTracker",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libscveObjectTracker.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libfastcvopt",
+                "libscveCommon",
+                "libscveObjectSegmentation",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libscveObjectTracker_stub",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libscveObjectTracker_stub.so",
+            ],
+            shared_libs: [
+                "libfastcvopt",
+                "liblog",
+                "libscveCommon",
+                "libcdsprpc",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libsdsprpc",
     owner: "motorola",
     strip: {
@@ -5306,6 +6889,34 @@ cc_prebuilt_library_shared {
             shared_libs: [
                 "liblog",
                 "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsettings",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libsettings.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libcutils",
+                "libc++",
+                "libdiag",
+                "libprotobuf-cpp-full-3.9.1-vendorcompat",
                 "libc",
                 "libm",
                 "libdl",
@@ -5603,7 +7214,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libsystem_health_mon",
+    name: "libsubsystem_control",
     owner: "motorola",
     strip: {
         none: true,
@@ -5611,11 +7222,39 @@ cc_prebuilt_library_shared {
     target: {
         android_arm64: {
             srcs: [
-                "proprietary/vendor/lib64/libsystem_health_mon.so",
+                "proprietary/vendor/lib64/libsubsystem_control.so",
             ],
             shared_libs: [
                 "libcutils",
-                "libutils",
+                "liblog",
+                "libqmi_cci",
+                "libqmi_common_so",
+                "libmdmdetect",
+                "libperipheral_client",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsysmon_cdsp_skel",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libsysmon_cdsp_skel.so",
+            ],
+            shared_libs: [
                 "liblog",
                 "libc++",
                 "libc",
@@ -5702,11 +7341,11 @@ cc_prebuilt_library_shared {
                 "libcneoplookup",
                 "libandroid_net",
                 "libutils",
-                "vendor.qti.hardware.data.cne.internal.api@1.0",
-                "vendor.qti.hardware.data.cne.internal.server@1.0",
-                "vendor.qti.hardware.data.latency@1.0",
-                "vendor.qti.latency@2.0",
-                "vendor.qti.hardware.mwqemadapter@1.0",
+                "vendor.qti.hardware.data.cne.internal.api@1.0_vendor",
+                "vendor.qti.hardware.data.cne.internal.server@1.0_vendor",
+                "vendor.qti.hardware.data.latency@1.0_vendor",
+                "vendor.qti.latency@2.0_vendor",
+                "vendor.qti.hardware.mwqemadapter@1.0_vendor",
                 "libc++",
                 "libc",
                 "libm",
@@ -5744,9 +7383,9 @@ cc_prebuilt_library_shared {
                 "libxml2",
                 "libandroid_net",
                 "libqti_vndfwk_detect",
-                "vendor.qti.hardware.data.cne.internal.server@1.0",
-                "vendor.qti.hardware.data.cne.internal.api@1.0",
-                "vendor.qti.hardware.mwqemadapter@1.0",
+                "vendor.qti.hardware.data.cne.internal.server@1.0_vendor",
+                "vendor.qti.hardware.data.cne.internal.api@1.0_vendor",
+                "vendor.qti.hardware.mwqemadapter@1.0_vendor",
                 "libc++",
                 "libc",
                 "libm",
@@ -5836,6 +7475,34 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/qcrilHalMarshal.so",
             ],
             shared_libs: [
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "qcril_hal_client",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/qcril_hal_client.so",
+            ],
+            shared_libs: [
+                "qcrilHalMarshal",
+                "libril-qc-logger",
+                "qcrild_librilutils",
+                "libqcrilFramework",
                 "libc++",
                 "libc",
                 "libm",
@@ -6005,7 +7672,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.data.factory@2.0",
+    name: "vendor.qti.data.factory@2.0_vendor",
+    stem: "vendor.qti.data.factory@2.0",
     owner: "motorola",
     strip: {
         none: true,
@@ -6016,13 +7684,13 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/vendor.qti.data.factory@2.0.so",
             ],
             shared_libs: [
-                "vendor.qti.hardware.data.cne.internal.api@1.0",
-                "vendor.qti.hardware.data.cne.internal.constants@1.0",
-                "vendor.qti.hardware.data.cne.internal.server@1.0",
-                "vendor.qti.hardware.data.dynamicdds@1.0",
-                "vendor.qti.hardware.data.qmi@1.0",
-                "vendor.qti.ims.rcsconfig@1.0",
-                "vendor.qti.latency@2.0",
+                "vendor.qti.hardware.data.cne.internal.api@1.0_vendor",
+                "vendor.qti.hardware.data.cne.internal.constants@1.0_vendor",
+                "vendor.qti.hardware.data.cne.internal.server@1.0_vendor",
+                "vendor.qti.hardware.data.dynamicdds@1.0_vendor",
+                "vendor.qti.hardware.data.qmi@1.0_vendor",
+                "vendor.qti.ims.rcsconfig@1.0_vendor",
+                "vendor.qti.latency@2.0_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -6040,7 +7708,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.data.factory@2.1",
+    name: "vendor.qti.data.factory@2.1_vendor",
+    stem: "vendor.qti.data.factory@2.1",
     owner: "motorola",
     strip: {
         none: true,
@@ -6051,16 +7720,16 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/vendor.qti.data.factory@2.1.so",
             ],
             shared_libs: [
-                "vendor.qti.data.factory@2.0",
-                "vendor.qti.data.slm@1.0",
-                "vendor.qti.hardware.data.cne.internal.api@1.0",
-                "vendor.qti.hardware.data.cne.internal.constants@1.0",
-                "vendor.qti.hardware.data.cne.internal.server@1.0",
-                "vendor.qti.hardware.data.dynamicdds@1.0",
-                "vendor.qti.hardware.data.qmi@1.0",
-                "vendor.qti.ims.rcsconfig@1.0",
-                "vendor.qti.ims.rcsconfig@1.1",
-                "vendor.qti.latency@2.0",
+                "vendor.qti.data.factory@2.0_vendor",
+                "vendor.qti.data.slm@1.0_vendor",
+                "vendor.qti.hardware.data.cne.internal.api@1.0_vendor",
+                "vendor.qti.hardware.data.cne.internal.constants@1.0_vendor",
+                "vendor.qti.hardware.data.cne.internal.server@1.0_vendor",
+                "vendor.qti.hardware.data.dynamicdds@1.0_vendor",
+                "vendor.qti.hardware.data.qmi@1.0_vendor",
+                "vendor.qti.ims.rcsconfig@1.0_vendor",
+                "vendor.qti.ims.rcsconfig@1.1_vendor",
+                "vendor.qti.latency@2.0_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -6078,7 +7747,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.data.factory@2.2",
+    name: "vendor.qti.data.factory@2.2_vendor",
+    stem: "vendor.qti.data.factory@2.2",
     owner: "motorola",
     strip: {
         none: true,
@@ -6089,18 +7759,18 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/vendor.qti.data.factory@2.2.so",
             ],
             shared_libs: [
-                "vendor.qti.data.factory@2.0",
-                "vendor.qti.data.factory@2.1",
-                "vendor.qti.data.mwqem@1.0",
-                "vendor.qti.data.slm@1.0",
-                "vendor.qti.hardware.data.cne.internal.api@1.0",
-                "vendor.qti.hardware.data.cne.internal.constants@1.0",
-                "vendor.qti.hardware.data.cne.internal.server@1.0",
-                "vendor.qti.hardware.data.dynamicdds@1.0",
-                "vendor.qti.hardware.data.qmi@1.0",
-                "vendor.qti.ims.rcsconfig@1.0",
-                "vendor.qti.ims.rcsconfig@1.1",
-                "vendor.qti.latency@2.0",
+                "vendor.qti.data.factory@2.0_vendor",
+                "vendor.qti.data.factory@2.1_vendor",
+                "vendor.qti.data.mwqem@1.0_vendor",
+                "vendor.qti.data.slm@1.0_vendor",
+                "vendor.qti.hardware.data.cne.internal.api@1.0_vendor",
+                "vendor.qti.hardware.data.cne.internal.constants@1.0_vendor",
+                "vendor.qti.hardware.data.cne.internal.server@1.0_vendor",
+                "vendor.qti.hardware.data.dynamicdds@1.0_vendor",
+                "vendor.qti.hardware.data.qmi@1.0_vendor",
+                "vendor.qti.ims.rcsconfig@1.0_vendor",
+                "vendor.qti.ims.rcsconfig@1.1_vendor",
+                "vendor.qti.latency@2.0_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -6118,7 +7788,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.data.factory@2.3",
+    name: "vendor.qti.data.factory@2.3_vendor",
+    stem: "vendor.qti.data.factory@2.3",
     owner: "motorola",
     strip: {
         none: true,
@@ -6129,20 +7800,20 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/vendor.qti.data.factory@2.3.so",
             ],
             shared_libs: [
-                "vendor.qti.data.factory@2.0",
-                "vendor.qti.data.factory@2.1",
-                "vendor.qti.data.factory@2.2",
-                "vendor.qti.data.mwqem@1.0",
-                "vendor.qti.data.slm@1.0",
-                "vendor.qti.hardware.data.cne.internal.api@1.0",
-                "vendor.qti.hardware.data.cne.internal.constants@1.0",
-                "vendor.qti.hardware.data.cne.internal.server@1.0",
-                "vendor.qti.hardware.data.dynamicdds@1.0",
-                "vendor.qti.hardware.data.lce@1.0",
-                "vendor.qti.hardware.data.qmi@1.0",
-                "vendor.qti.ims.rcsconfig@1.0",
-                "vendor.qti.ims.rcsconfig@1.1",
-                "vendor.qti.latency@2.0",
+                "vendor.qti.data.factory@2.0_vendor",
+                "vendor.qti.data.factory@2.1_vendor",
+                "vendor.qti.data.factory@2.2_vendor",
+                "vendor.qti.data.mwqem@1.0_vendor",
+                "vendor.qti.data.slm@1.0_vendor",
+                "vendor.qti.hardware.data.cne.internal.api@1.0_vendor",
+                "vendor.qti.hardware.data.cne.internal.constants@1.0_vendor",
+                "vendor.qti.hardware.data.cne.internal.server@1.0_vendor",
+                "vendor.qti.hardware.data.dynamicdds@1.0_vendor",
+                "vendor.qti.hardware.data.lce@1.0_vendor",
+                "vendor.qti.hardware.data.qmi@1.0_vendor",
+                "vendor.qti.ims.rcsconfig@1.0_vendor",
+                "vendor.qti.ims.rcsconfig@1.1_vendor",
+                "vendor.qti.latency@2.0_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -6160,7 +7831,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.data.mwqem@1.0",
+    name: "vendor.qti.data.mwqem@1.0_vendor",
+    stem: "vendor.qti.data.mwqem@1.0",
     owner: "motorola",
     strip: {
         none: true,
@@ -6188,7 +7860,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.data.slm@1.0",
+    name: "vendor.qti.data.slm@1.0_vendor",
+    stem: "vendor.qti.data.slm@1.0",
     owner: "motorola",
     strip: {
         none: true,
@@ -6393,7 +8066,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.data.cne.internal.api@1.0",
+    name: "vendor.qti.hardware.data.cne.internal.api@1.0_vendor",
+    stem: "vendor.qti.hardware.data.cne.internal.api@1.0",
     owner: "motorola",
     strip: {
         none: true,
@@ -6404,7 +8078,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/vendor.qti.hardware.data.cne.internal.api@1.0.so",
             ],
             shared_libs: [
-                "vendor.qti.hardware.data.cne.internal.constants@1.0",
+                "vendor.qti.hardware.data.cne.internal.constants@1.0_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -6422,7 +8096,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.data.cne.internal.constants@1.0",
+    name: "vendor.qti.hardware.data.cne.internal.constants@1.0_vendor",
+    stem: "vendor.qti.hardware.data.cne.internal.constants@1.0",
     owner: "motorola",
     strip: {
         none: true,
@@ -6450,7 +8125,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.data.cne.internal.server@1.0",
+    name: "vendor.qti.hardware.data.cne.internal.server@1.0_vendor",
+    stem: "vendor.qti.hardware.data.cne.internal.server@1.0",
     owner: "motorola",
     strip: {
         none: true,
@@ -6461,7 +8137,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/vendor.qti.hardware.data.cne.internal.server@1.0.so",
             ],
             shared_libs: [
-                "vendor.qti.hardware.data.cne.internal.constants@1.0",
+                "vendor.qti.hardware.data.cne.internal.constants@1.0_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -6479,7 +8155,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.data.connection@1.0",
+    name: "vendor.qti.hardware.data.connection@1.0_vendor",
+    stem: "vendor.qti.hardware.data.connection@1.0",
     owner: "motorola",
     strip: {
         none: true,
@@ -6507,7 +8184,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.data.connection@1.1",
+    name: "vendor.qti.hardware.data.connection@1.1_vendor",
+    stem: "vendor.qti.hardware.data.connection@1.1",
     owner: "motorola",
     strip: {
         none: true,
@@ -6518,7 +8196,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/vendor.qti.hardware.data.connection@1.1.so",
             ],
             shared_libs: [
-                "vendor.qti.hardware.data.connection@1.0",
+                "vendor.qti.hardware.data.connection@1.0_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -6536,7 +8214,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.data.dynamicdds@1.0",
+    name: "vendor.qti.hardware.data.dynamicdds@1.0_vendor",
+    stem: "vendor.qti.hardware.data.dynamicdds@1.0",
     owner: "motorola",
     strip: {
         none: true,
@@ -6564,7 +8243,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.data.iwlan@1.0",
+    name: "vendor.qti.hardware.data.iwlan@1.0_vendor",
+    stem: "vendor.qti.hardware.data.iwlan@1.0",
     owner: "motorola",
     strip: {
         none: true,
@@ -6597,7 +8277,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.data.latency@1.0",
+    name: "vendor.qti.hardware.data.latency@1.0_vendor",
+    stem: "vendor.qti.hardware.data.latency@1.0",
     owner: "motorola",
     strip: {
         none: true,
@@ -6625,7 +8306,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.data.lce@1.0",
+    name: "vendor.qti.hardware.data.lce@1.0_vendor",
+    stem: "vendor.qti.hardware.data.lce@1.0",
     owner: "motorola",
     strip: {
         none: true,
@@ -6653,7 +8335,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.data.qmi@1.0",
+    name: "vendor.qti.hardware.data.qmi@1.0_vendor",
+    stem: "vendor.qti.hardware.data.qmi@1.0",
     owner: "motorola",
     strip: {
         none: true,
@@ -6681,8 +8364,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.fm@1.0_vendor",
-    stem: "vendor.qti.hardware.fm@1.0",
+    name: "vendor.qti.hardware.embmssl@1.0-adapter-helper",
     owner: "motorola",
     strip: {
         none: true,
@@ -6690,7 +8372,37 @@ cc_prebuilt_library_shared {
     target: {
         android_arm64: {
             srcs: [
-                "proprietary/vendor/lib64/vendor.qti.hardware.fm@1.0.so",
+                "proprietary/vendor/lib64/vendor.qti.hardware.embmssl@1.0-adapter-helper.so",
+            ],
+            shared_libs: [
+                "libbase",
+                "libcutils",
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.qti.hardware.embmssl@1.0_vendor",
+    stem: "vendor.qti.hardware.embmssl@1.0",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.qti.hardware.embmssl@1.0.so",
             ],
             shared_libs: [
                 "libhidlbase",
@@ -6710,7 +8422,67 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.mwqemadapter@1.0",
+    name: "vendor.qti.hardware.embmssl@1.1-adapter-helper",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.qti.hardware.embmssl@1.1-adapter-helper.so",
+            ],
+            shared_libs: [
+                "libbase",
+                "libcutils",
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.qti.hardware.embmssl@1.1_vendor",
+    stem: "vendor.qti.hardware.embmssl@1.1",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.qti.hardware.embmssl@1.1.so",
+            ],
+            shared_libs: [
+                "vendor.qti.hardware.embmssl@1.0_vendor",
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.qti.hardware.mwqemadapter@1.0_vendor",
+    stem: "vendor.qti.hardware.mwqemadapter@1.0",
     owner: "motorola",
     strip: {
         none: true,
@@ -6794,7 +8566,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.radio.am@1.0",
+    name: "vendor.qti.hardware.radio.am@1.0_vendor",
+    stem: "vendor.qti.hardware.radio.am@1.0",
     owner: "motorola",
     strip: {
         none: true,
@@ -6822,7 +8595,37 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.radio.ims@1.0",
+    name: "vendor.qti.hardware.radio.atcmdfwd@1.0_vendor",
+    stem: "vendor.qti.hardware.radio.atcmdfwd@1.0",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.qti.hardware.radio.atcmdfwd@1.0.so",
+            ],
+            shared_libs: [
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.qti.hardware.radio.ims@1.0_vendor",
+    stem: "vendor.qti.hardware.radio.ims@1.0",
     owner: "motorola",
     strip: {
         none: true,
@@ -6850,7 +8653,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.radio.ims@1.1",
+    name: "vendor.qti.hardware.radio.ims@1.1_vendor",
+    stem: "vendor.qti.hardware.radio.ims@1.1",
     owner: "motorola",
     strip: {
         none: true,
@@ -6861,7 +8665,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/vendor.qti.hardware.radio.ims@1.1.so",
             ],
             shared_libs: [
-                "vendor.qti.hardware.radio.ims@1.0",
+                "vendor.qti.hardware.radio.ims@1.0_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -6879,7 +8683,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.radio.ims@1.2",
+    name: "vendor.qti.hardware.radio.ims@1.2_vendor",
+    stem: "vendor.qti.hardware.radio.ims@1.2",
     owner: "motorola",
     strip: {
         none: true,
@@ -6890,8 +8695,8 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/vendor.qti.hardware.radio.ims@1.2.so",
             ],
             shared_libs: [
-                "vendor.qti.hardware.radio.ims@1.0",
-                "vendor.qti.hardware.radio.ims@1.1",
+                "vendor.qti.hardware.radio.ims@1.0_vendor",
+                "vendor.qti.hardware.radio.ims@1.1_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -6909,7 +8714,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.radio.ims@1.3",
+    name: "vendor.qti.hardware.radio.ims@1.3_vendor",
+    stem: "vendor.qti.hardware.radio.ims@1.3",
     owner: "motorola",
     strip: {
         none: true,
@@ -6920,9 +8726,9 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/vendor.qti.hardware.radio.ims@1.3.so",
             ],
             shared_libs: [
-                "vendor.qti.hardware.radio.ims@1.0",
-                "vendor.qti.hardware.radio.ims@1.1",
-                "vendor.qti.hardware.radio.ims@1.2",
+                "vendor.qti.hardware.radio.ims@1.0_vendor",
+                "vendor.qti.hardware.radio.ims@1.1_vendor",
+                "vendor.qti.hardware.radio.ims@1.2_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -6940,7 +8746,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.radio.ims@1.4",
+    name: "vendor.qti.hardware.radio.ims@1.4_vendor",
+    stem: "vendor.qti.hardware.radio.ims@1.4",
     owner: "motorola",
     strip: {
         none: true,
@@ -6951,10 +8758,10 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/vendor.qti.hardware.radio.ims@1.4.so",
             ],
             shared_libs: [
-                "vendor.qti.hardware.radio.ims@1.0",
-                "vendor.qti.hardware.radio.ims@1.1",
-                "vendor.qti.hardware.radio.ims@1.2",
-                "vendor.qti.hardware.radio.ims@1.3",
+                "vendor.qti.hardware.radio.ims@1.0_vendor",
+                "vendor.qti.hardware.radio.ims@1.1_vendor",
+                "vendor.qti.hardware.radio.ims@1.2_vendor",
+                "vendor.qti.hardware.radio.ims@1.3_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -6972,7 +8779,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.radio.ims@1.5",
+    name: "vendor.qti.hardware.radio.ims@1.5_vendor",
+    stem: "vendor.qti.hardware.radio.ims@1.5",
     owner: "motorola",
     strip: {
         none: true,
@@ -6983,11 +8791,11 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/vendor.qti.hardware.radio.ims@1.5.so",
             ],
             shared_libs: [
-                "vendor.qti.hardware.radio.ims@1.0",
-                "vendor.qti.hardware.radio.ims@1.1",
-                "vendor.qti.hardware.radio.ims@1.2",
-                "vendor.qti.hardware.radio.ims@1.3",
-                "vendor.qti.hardware.radio.ims@1.4",
+                "vendor.qti.hardware.radio.ims@1.0_vendor",
+                "vendor.qti.hardware.radio.ims@1.1_vendor",
+                "vendor.qti.hardware.radio.ims@1.2_vendor",
+                "vendor.qti.hardware.radio.ims@1.3_vendor",
+                "vendor.qti.hardware.radio.ims@1.4_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -7005,7 +8813,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.radio.ims@1.6",
+    name: "vendor.qti.hardware.radio.ims@1.6_vendor",
+    stem: "vendor.qti.hardware.radio.ims@1.6",
     owner: "motorola",
     strip: {
         none: true,
@@ -7016,12 +8825,12 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/vendor.qti.hardware.radio.ims@1.6.so",
             ],
             shared_libs: [
-                "vendor.qti.hardware.radio.ims@1.0",
-                "vendor.qti.hardware.radio.ims@1.1",
-                "vendor.qti.hardware.radio.ims@1.2",
-                "vendor.qti.hardware.radio.ims@1.3",
-                "vendor.qti.hardware.radio.ims@1.4",
-                "vendor.qti.hardware.radio.ims@1.5",
+                "vendor.qti.hardware.radio.ims@1.0_vendor",
+                "vendor.qti.hardware.radio.ims@1.1_vendor",
+                "vendor.qti.hardware.radio.ims@1.2_vendor",
+                "vendor.qti.hardware.radio.ims@1.3_vendor",
+                "vendor.qti.hardware.radio.ims@1.4_vendor",
+                "vendor.qti.hardware.radio.ims@1.5_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -7039,7 +8848,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.radio.ims@1.7",
+    name: "vendor.qti.hardware.radio.ims@1.7_vendor",
+    stem: "vendor.qti.hardware.radio.ims@1.7",
     owner: "motorola",
     strip: {
         none: true,
@@ -7050,13 +8860,13 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/vendor.qti.hardware.radio.ims@1.7.so",
             ],
             shared_libs: [
-                "vendor.qti.hardware.radio.ims@1.0",
-                "vendor.qti.hardware.radio.ims@1.1",
-                "vendor.qti.hardware.radio.ims@1.2",
-                "vendor.qti.hardware.radio.ims@1.3",
-                "vendor.qti.hardware.radio.ims@1.4",
-                "vendor.qti.hardware.radio.ims@1.5",
-                "vendor.qti.hardware.radio.ims@1.6",
+                "vendor.qti.hardware.radio.ims@1.0_vendor",
+                "vendor.qti.hardware.radio.ims@1.1_vendor",
+                "vendor.qti.hardware.radio.ims@1.2_vendor",
+                "vendor.qti.hardware.radio.ims@1.3_vendor",
+                "vendor.qti.hardware.radio.ims@1.4_vendor",
+                "vendor.qti.hardware.radio.ims@1.5_vendor",
+                "vendor.qti.hardware.radio.ims@1.6_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -7074,7 +8884,83 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.radio.internal.deviceinfo@1.0",
+    name: "vendor.qti.hardware.radio.ims@1.8_vendor",
+    stem: "vendor.qti.hardware.radio.ims@1.8",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.qti.hardware.radio.ims@1.8.so",
+            ],
+            shared_libs: [
+                "vendor.qti.hardware.radio.ims@1.0_vendor",
+                "vendor.qti.hardware.radio.ims@1.1_vendor",
+                "vendor.qti.hardware.radio.ims@1.2_vendor",
+                "vendor.qti.hardware.radio.ims@1.3_vendor",
+                "vendor.qti.hardware.radio.ims@1.4_vendor",
+                "vendor.qti.hardware.radio.ims@1.5_vendor",
+                "vendor.qti.hardware.radio.ims@1.6_vendor",
+                "vendor.qti.hardware.radio.ims@1.7_vendor",
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.qti.hardware.radio.ims@1.9_vendor",
+    stem: "vendor.qti.hardware.radio.ims@1.9",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.qti.hardware.radio.ims@1.9.so",
+            ],
+            shared_libs: [
+                "vendor.qti.hardware.radio.ims@1.0_vendor",
+                "vendor.qti.hardware.radio.ims@1.1_vendor",
+                "vendor.qti.hardware.radio.ims@1.2_vendor",
+                "vendor.qti.hardware.radio.ims@1.3_vendor",
+                "vendor.qti.hardware.radio.ims@1.4_vendor",
+                "vendor.qti.hardware.radio.ims@1.5_vendor",
+                "vendor.qti.hardware.radio.ims@1.6_vendor",
+                "vendor.qti.hardware.radio.ims@1.7_vendor",
+                "vendor.qti.hardware.radio.ims@1.8_vendor",
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.qti.hardware.radio.internal.deviceinfo@1.0_vendor",
+    stem: "vendor.qti.hardware.radio.internal.deviceinfo@1.0",
     owner: "motorola",
     strip: {
         none: true,
@@ -7102,7 +8988,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.radio.lpa@1.0",
+    name: "vendor.qti.hardware.radio.lpa@1.0_vendor",
+    stem: "vendor.qti.hardware.radio.lpa@1.0",
     owner: "motorola",
     strip: {
         none: true,
@@ -7130,7 +9017,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.radio.lpa@1.1",
+    name: "vendor.qti.hardware.radio.lpa@1.1_vendor",
+    stem: "vendor.qti.hardware.radio.lpa@1.1",
     owner: "motorola",
     strip: {
         none: true,
@@ -7141,7 +9029,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/vendor.qti.hardware.radio.lpa@1.1.so",
             ],
             shared_libs: [
-                "vendor.qti.hardware.radio.lpa@1.0",
+                "vendor.qti.hardware.radio.lpa@1.0_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -7159,7 +9047,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.radio.lpa@1.2",
+    name: "vendor.qti.hardware.radio.lpa@1.2_vendor",
+    stem: "vendor.qti.hardware.radio.lpa@1.2",
     owner: "motorola",
     strip: {
         none: true,
@@ -7170,8 +9059,8 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/vendor.qti.hardware.radio.lpa@1.2.so",
             ],
             shared_libs: [
-                "vendor.qti.hardware.radio.lpa@1.0",
-                "vendor.qti.hardware.radio.lpa@1.1",
+                "vendor.qti.hardware.radio.lpa@1.0_vendor",
+                "vendor.qti.hardware.radio.lpa@1.1_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -7189,7 +9078,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.radio.qcrilhook@1.0",
+    name: "vendor.qti.hardware.radio.qcrilhook@1.0_vendor",
+    stem: "vendor.qti.hardware.radio.qcrilhook@1.0",
     owner: "motorola",
     strip: {
         none: true,
@@ -7217,7 +9107,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.radio.qtiradio@1.0",
+    name: "vendor.qti.hardware.radio.qtiradio@1.0_vendor",
+    stem: "vendor.qti.hardware.radio.qtiradio@1.0",
     owner: "motorola",
     strip: {
         none: true,
@@ -7245,7 +9136,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.radio.qtiradio@2.0",
+    name: "vendor.qti.hardware.radio.qtiradio@2.0_vendor",
+    stem: "vendor.qti.hardware.radio.qtiradio@2.0",
     owner: "motorola",
     strip: {
         none: true,
@@ -7257,7 +9149,7 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "android.hardware.radio@1.0",
-                "vendor.qti.hardware.radio.qtiradio@1.0",
+                "vendor.qti.hardware.radio.qtiradio@1.0_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -7275,7 +9167,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.radio.qtiradio@2.1",
+    name: "vendor.qti.hardware.radio.qtiradio@2.1_vendor",
+    stem: "vendor.qti.hardware.radio.qtiradio@2.1",
     owner: "motorola",
     strip: {
         none: true,
@@ -7287,8 +9180,8 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "android.hardware.radio@1.0",
-                "vendor.qti.hardware.radio.qtiradio@1.0",
-                "vendor.qti.hardware.radio.qtiradio@2.0",
+                "vendor.qti.hardware.radio.qtiradio@1.0_vendor",
+                "vendor.qti.hardware.radio.qtiradio@2.0_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -7306,7 +9199,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.radio.qtiradio@2.2",
+    name: "vendor.qti.hardware.radio.qtiradio@2.2_vendor",
+    stem: "vendor.qti.hardware.radio.qtiradio@2.2",
     owner: "motorola",
     strip: {
         none: true,
@@ -7318,9 +9212,9 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "android.hardware.radio@1.0",
-                "vendor.qti.hardware.radio.qtiradio@1.0",
-                "vendor.qti.hardware.radio.qtiradio@2.0",
-                "vendor.qti.hardware.radio.qtiradio@2.1",
+                "vendor.qti.hardware.radio.qtiradio@1.0_vendor",
+                "vendor.qti.hardware.radio.qtiradio@2.0_vendor",
+                "vendor.qti.hardware.radio.qtiradio@2.1_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -7338,7 +9232,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.radio.qtiradio@2.3",
+    name: "vendor.qti.hardware.radio.qtiradio@2.3_vendor",
+    stem: "vendor.qti.hardware.radio.qtiradio@2.3",
     owner: "motorola",
     strip: {
         none: true,
@@ -7350,10 +9245,10 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "android.hardware.radio@1.0",
-                "vendor.qti.hardware.radio.qtiradio@1.0",
-                "vendor.qti.hardware.radio.qtiradio@2.0",
-                "vendor.qti.hardware.radio.qtiradio@2.1",
-                "vendor.qti.hardware.radio.qtiradio@2.2",
+                "vendor.qti.hardware.radio.qtiradio@1.0_vendor",
+                "vendor.qti.hardware.radio.qtiradio@2.0_vendor",
+                "vendor.qti.hardware.radio.qtiradio@2.1_vendor",
+                "vendor.qti.hardware.radio.qtiradio@2.2_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -7371,7 +9266,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.radio.qtiradio@2.4",
+    name: "vendor.qti.hardware.radio.qtiradio@2.4_vendor",
+    stem: "vendor.qti.hardware.radio.qtiradio@2.4",
     owner: "motorola",
     strip: {
         none: true,
@@ -7384,11 +9280,11 @@ cc_prebuilt_library_shared {
             shared_libs: [
                 "android.hardware.radio@1.0",
                 "android.hardware.radio@1.1",
-                "vendor.qti.hardware.radio.qtiradio@1.0",
-                "vendor.qti.hardware.radio.qtiradio@2.0",
-                "vendor.qti.hardware.radio.qtiradio@2.1",
-                "vendor.qti.hardware.radio.qtiradio@2.2",
-                "vendor.qti.hardware.radio.qtiradio@2.3",
+                "vendor.qti.hardware.radio.qtiradio@1.0_vendor",
+                "vendor.qti.hardware.radio.qtiradio@2.0_vendor",
+                "vendor.qti.hardware.radio.qtiradio@2.1_vendor",
+                "vendor.qti.hardware.radio.qtiradio@2.2_vendor",
+                "vendor.qti.hardware.radio.qtiradio@2.3_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -7406,7 +9302,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.radio.qtiradio@2.5",
+    name: "vendor.qti.hardware.radio.qtiradio@2.5_vendor",
+    stem: "vendor.qti.hardware.radio.qtiradio@2.5",
     owner: "motorola",
     strip: {
         none: true,
@@ -7419,12 +9316,12 @@ cc_prebuilt_library_shared {
             shared_libs: [
                 "android.hardware.radio@1.0",
                 "android.hardware.radio@1.1",
-                "vendor.qti.hardware.radio.qtiradio@1.0",
-                "vendor.qti.hardware.radio.qtiradio@2.0",
-                "vendor.qti.hardware.radio.qtiradio@2.1",
-                "vendor.qti.hardware.radio.qtiradio@2.2",
-                "vendor.qti.hardware.radio.qtiradio@2.3",
-                "vendor.qti.hardware.radio.qtiradio@2.4",
+                "vendor.qti.hardware.radio.qtiradio@1.0_vendor",
+                "vendor.qti.hardware.radio.qtiradio@2.0_vendor",
+                "vendor.qti.hardware.radio.qtiradio@2.1_vendor",
+                "vendor.qti.hardware.radio.qtiradio@2.2_vendor",
+                "vendor.qti.hardware.radio.qtiradio@2.3_vendor",
+                "vendor.qti.hardware.radio.qtiradio@2.4_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -7442,7 +9339,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.radio.qtiradio@2.6",
+    name: "vendor.qti.hardware.radio.qtiradio@2.6_vendor",
+    stem: "vendor.qti.hardware.radio.qtiradio@2.6",
     owner: "motorola",
     strip: {
         none: true,
@@ -7454,13 +9352,13 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "android.hardware.radio@1.0",
-                "vendor.qti.hardware.radio.qtiradio@1.0",
-                "vendor.qti.hardware.radio.qtiradio@2.0",
-                "vendor.qti.hardware.radio.qtiradio@2.1",
-                "vendor.qti.hardware.radio.qtiradio@2.2",
-                "vendor.qti.hardware.radio.qtiradio@2.3",
-                "vendor.qti.hardware.radio.qtiradio@2.4",
-                "vendor.qti.hardware.radio.qtiradio@2.5",
+                "vendor.qti.hardware.radio.qtiradio@1.0_vendor",
+                "vendor.qti.hardware.radio.qtiradio@2.0_vendor",
+                "vendor.qti.hardware.radio.qtiradio@2.1_vendor",
+                "vendor.qti.hardware.radio.qtiradio@2.2_vendor",
+                "vendor.qti.hardware.radio.qtiradio@2.3_vendor",
+                "vendor.qti.hardware.radio.qtiradio@2.4_vendor",
+                "vendor.qti.hardware.radio.qtiradio@2.5_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -7478,7 +9376,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.radio.qtiradio@2.7",
+    name: "vendor.qti.hardware.radio.qtiradio@2.7_vendor",
+    stem: "vendor.qti.hardware.radio.qtiradio@2.7",
     owner: "motorola",
     strip: {
         none: true,
@@ -7491,14 +9390,14 @@ cc_prebuilt_library_shared {
             shared_libs: [
                 "android.hardware.radio@1.0",
                 "android.hidl.safe_union@1.0",
-                "vendor.qti.hardware.radio.qtiradio@1.0",
-                "vendor.qti.hardware.radio.qtiradio@2.0",
-                "vendor.qti.hardware.radio.qtiradio@2.1",
-                "vendor.qti.hardware.radio.qtiradio@2.2",
-                "vendor.qti.hardware.radio.qtiradio@2.3",
-                "vendor.qti.hardware.radio.qtiradio@2.4",
-                "vendor.qti.hardware.radio.qtiradio@2.5",
-                "vendor.qti.hardware.radio.qtiradio@2.6",
+                "vendor.qti.hardware.radio.qtiradio@1.0_vendor",
+                "vendor.qti.hardware.radio.qtiradio@2.0_vendor",
+                "vendor.qti.hardware.radio.qtiradio@2.1_vendor",
+                "vendor.qti.hardware.radio.qtiradio@2.2_vendor",
+                "vendor.qti.hardware.radio.qtiradio@2.3_vendor",
+                "vendor.qti.hardware.radio.qtiradio@2.4_vendor",
+                "vendor.qti.hardware.radio.qtiradio@2.5_vendor",
+                "vendor.qti.hardware.radio.qtiradio@2.6_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -7516,7 +9415,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.radio.uim@1.0",
+    name: "vendor.qti.hardware.radio.uim@1.0_vendor",
+    stem: "vendor.qti.hardware.radio.uim@1.0",
     owner: "motorola",
     strip: {
         none: true,
@@ -7544,7 +9444,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.radio.uim@1.1",
+    name: "vendor.qti.hardware.radio.uim@1.1_vendor",
+    stem: "vendor.qti.hardware.radio.uim@1.1",
     owner: "motorola",
     strip: {
         none: true,
@@ -7555,7 +9456,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/vendor.qti.hardware.radio.uim@1.1.so",
             ],
             shared_libs: [
-                "vendor.qti.hardware.radio.uim@1.0",
+                "vendor.qti.hardware.radio.uim@1.0_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -7573,7 +9474,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.radio.uim@1.2",
+    name: "vendor.qti.hardware.radio.uim@1.2_vendor",
+    stem: "vendor.qti.hardware.radio.uim@1.2",
     owner: "motorola",
     strip: {
         none: true,
@@ -7584,8 +9486,8 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/vendor.qti.hardware.radio.uim@1.2.so",
             ],
             shared_libs: [
-                "vendor.qti.hardware.radio.uim@1.0",
-                "vendor.qti.hardware.radio.uim@1.1",
+                "vendor.qti.hardware.radio.uim@1.0_vendor",
+                "vendor.qti.hardware.radio.uim@1.1_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -7603,7 +9505,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.radio.uim_remote_client@1.0",
+    name: "vendor.qti.hardware.radio.uim_remote_client@1.0_vendor",
+    stem: "vendor.qti.hardware.radio.uim_remote_client@1.0",
     owner: "motorola",
     strip: {
         none: true,
@@ -7631,7 +9534,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.radio.uim_remote_client@1.1",
+    name: "vendor.qti.hardware.radio.uim_remote_client@1.1_vendor",
+    stem: "vendor.qti.hardware.radio.uim_remote_client@1.1",
     owner: "motorola",
     strip: {
         none: true,
@@ -7642,7 +9546,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.1.so",
             ],
             shared_libs: [
-                "vendor.qti.hardware.radio.uim_remote_client@1.0",
+                "vendor.qti.hardware.radio.uim_remote_client@1.0_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -7660,7 +9564,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.radio.uim_remote_client@1.2",
+    name: "vendor.qti.hardware.radio.uim_remote_client@1.2_vendor",
+    stem: "vendor.qti.hardware.radio.uim_remote_client@1.2",
     owner: "motorola",
     strip: {
         none: true,
@@ -7671,8 +9576,8 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.2.so",
             ],
             shared_libs: [
-                "vendor.qti.hardware.radio.uim_remote_client@1.0",
-                "vendor.qti.hardware.radio.uim_remote_client@1.1",
+                "vendor.qti.hardware.radio.uim_remote_client@1.0_vendor",
+                "vendor.qti.hardware.radio.uim_remote_client@1.1_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -7690,7 +9595,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.radio.uim_remote_server@1.0",
+    name: "vendor.qti.hardware.radio.uim_remote_server@1.0_vendor",
+    stem: "vendor.qti.hardware.radio.uim_remote_server@1.0",
     owner: "motorola",
     strip: {
         none: true,
@@ -7774,7 +9680,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.sensorscalibrate@1.0",
+    name: "vendor.qti.hardware.slmadapter@1.0_vendor",
+    stem: "vendor.qti.hardware.slmadapter@1.0",
     owner: "motorola",
     strip: {
         none: true,
@@ -7782,7 +9689,7 @@ cc_prebuilt_library_shared {
     target: {
         android_arm64: {
             srcs: [
-                "proprietary/vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so",
+                "proprietary/vendor/lib64/vendor.qti.hardware.slmadapter@1.0.so",
             ],
             shared_libs: [
                 "libhidlbase",
@@ -7830,64 +9737,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.vpp@1.1",
-    owner: "motorola",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/vendor.qti.hardware.vpp@1.1.so",
-            ],
-            shared_libs: [
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.vpp@1.2",
-    owner: "motorola",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/vendor.qti.hardware.vpp@1.2.so",
-            ],
-            shared_libs: [
-                "vendor.qti.hardware.vpp@1.1",
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.ims.callcapability@1.0",
+    name: "vendor.qti.ims.callcapability@1.0_vendor",
+    stem: "vendor.qti.ims.callcapability@1.0",
     owner: "motorola",
     strip: {
         none: true,
@@ -7915,7 +9766,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.ims.callinfo@1.0",
+    name: "vendor.qti.ims.callinfo@1.0_vendor",
+    stem: "vendor.qti.ims.callinfo@1.0",
     owner: "motorola",
     strip: {
         none: true,
@@ -7943,7 +9795,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.ims.configservice@1.0",
+    name: "vendor.qti.ims.configservice@1.0_vendor",
+    stem: "vendor.qti.ims.configservice@1.0",
     owner: "motorola",
     strip: {
         none: true,
@@ -7971,7 +9824,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.ims.configservice@1.1",
+    name: "vendor.qti.ims.configservice@1.1_vendor",
+    stem: "vendor.qti.ims.configservice@1.1",
     owner: "motorola",
     strip: {
         none: true,
@@ -7982,7 +9836,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/vendor.qti.ims.configservice@1.1.so",
             ],
             shared_libs: [
-                "vendor.qti.ims.configservice@1.0",
+                "vendor.qti.ims.configservice@1.0_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -8000,7 +9854,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.ims.connection@1.0",
+    name: "vendor.qti.ims.connection@1.0_vendor",
+    stem: "vendor.qti.ims.connection@1.0",
     owner: "motorola",
     strip: {
         none: true,
@@ -8028,7 +9883,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.ims.factory@1.0",
+    name: "vendor.qti.ims.factory@1.0_vendor",
+    stem: "vendor.qti.ims.factory@1.0",
     owner: "motorola",
     strip: {
         none: true,
@@ -8039,8 +9895,8 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/vendor.qti.ims.factory@1.0.so",
             ],
             shared_libs: [
-                "vendor.qti.ims.callcapability@1.0",
-                "vendor.qti.ims.rcsconfig@2.0",
+                "vendor.qti.ims.callcapability@1.0_vendor",
+                "vendor.qti.ims.rcsconfig@2.0_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -8058,7 +9914,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.ims.factory@1.1",
+    name: "vendor.qti.ims.factory@1.1_vendor",
+    stem: "vendor.qti.ims.factory@1.1",
     owner: "motorola",
     strip: {
         none: true,
@@ -8069,10 +9926,10 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/vendor.qti.ims.factory@1.1.so",
             ],
             shared_libs: [
-                "vendor.qti.ims.callcapability@1.0",
-                "vendor.qti.ims.factory@1.0",
-                "vendor.qti.ims.rcsconfig@2.0",
-                "vendor.qti.ims.rcsconfig@2.1",
+                "vendor.qti.ims.callcapability@1.0_vendor",
+                "vendor.qti.ims.factory@1.0_vendor",
+                "vendor.qti.ims.rcsconfig@2.0_vendor",
+                "vendor.qti.ims.rcsconfig@2.1_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -8090,7 +9947,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.ims.factory@2.0",
+    name: "vendor.qti.ims.factory@2.0_vendor",
+    stem: "vendor.qti.ims.factory@2.0",
     owner: "motorola",
     strip: {
         none: true,
@@ -8101,11 +9959,11 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/vendor.qti.ims.factory@2.0.so",
             ],
             shared_libs: [
-                "vendor.qti.ims.callcapability@1.0",
-                "vendor.qti.ims.configservice@1.0",
-                "vendor.qti.ims.connection@1.0",
-                "vendor.qti.ims.rcssip@1.0",
-                "vendor.qti.ims.rcsuce@1.0",
+                "vendor.qti.ims.callcapability@1.0_vendor",
+                "vendor.qti.ims.configservice@1.0_vendor",
+                "vendor.qti.ims.connection@1.0_vendor",
+                "vendor.qti.ims.rcssip@1.0_vendor",
+                "vendor.qti.ims.rcsuce@1.0_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -8123,7 +9981,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.ims.factory@2.1",
+    name: "vendor.qti.ims.factory@2.1_vendor",
+    stem: "vendor.qti.ims.factory@2.1",
     owner: "motorola",
     strip: {
         none: true,
@@ -8134,15 +9993,15 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/vendor.qti.ims.factory@2.1.so",
             ],
             shared_libs: [
-                "vendor.qti.ims.callcapability@1.0",
-                "vendor.qti.ims.configservice@1.0",
-                "vendor.qti.ims.configservice@1.1",
-                "vendor.qti.ims.connection@1.0",
-                "vendor.qti.ims.factory@2.0",
-                "vendor.qti.ims.rcssip@1.0",
-                "vendor.qti.ims.rcssip@1.1",
-                "vendor.qti.ims.rcsuce@1.0",
-                "vendor.qti.ims.rcsuce@1.1",
+                "vendor.qti.ims.callcapability@1.0_vendor",
+                "vendor.qti.ims.configservice@1.0_vendor",
+                "vendor.qti.ims.configservice@1.1_vendor",
+                "vendor.qti.ims.connection@1.0_vendor",
+                "vendor.qti.ims.factory@2.0_vendor",
+                "vendor.qti.ims.rcssip@1.0_vendor",
+                "vendor.qti.ims.rcssip@1.1_vendor",
+                "vendor.qti.ims.rcsuce@1.0_vendor",
+                "vendor.qti.ims.rcsuce@1.1_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -8160,7 +10019,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.ims.factory@2.2",
+    name: "vendor.qti.ims.factory@2.2_vendor",
+    stem: "vendor.qti.ims.factory@2.2",
     owner: "motorola",
     strip: {
         none: true,
@@ -8171,18 +10031,18 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/vendor.qti.ims.factory@2.2.so",
             ],
             shared_libs: [
-                "vendor.qti.ims.callcapability@1.0",
-                "vendor.qti.ims.configservice@1.0",
-                "vendor.qti.ims.configservice@1.1",
-                "vendor.qti.ims.connection@1.0",
-                "vendor.qti.ims.factory@2.0",
-                "vendor.qti.ims.factory@2.1",
-                "vendor.qti.ims.rcssip@1.0",
-                "vendor.qti.ims.rcssip@1.1",
-                "vendor.qti.ims.rcssip@1.2",
-                "vendor.qti.ims.rcsuce@1.0",
-                "vendor.qti.ims.rcsuce@1.1",
-                "vendor.qti.ims.rcsuce@1.2",
+                "vendor.qti.ims.callcapability@1.0_vendor",
+                "vendor.qti.ims.configservice@1.0_vendor",
+                "vendor.qti.ims.configservice@1.1_vendor",
+                "vendor.qti.ims.connection@1.0_vendor",
+                "vendor.qti.ims.factory@2.0_vendor",
+                "vendor.qti.ims.factory@2.1_vendor",
+                "vendor.qti.ims.rcssip@1.0_vendor",
+                "vendor.qti.ims.rcssip@1.1_vendor",
+                "vendor.qti.ims.rcssip@1.2_vendor",
+                "vendor.qti.ims.rcsuce@1.0_vendor",
+                "vendor.qti.ims.rcsuce@1.1_vendor",
+                "vendor.qti.ims.rcsuce@1.2_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -8200,7 +10060,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.ims.rcsconfig@1.0",
+    name: "vendor.qti.ims.rcsconfig@1.0_vendor",
+    stem: "vendor.qti.ims.rcsconfig@1.0",
     owner: "motorola",
     strip: {
         none: true,
@@ -8228,7 +10089,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.ims.rcsconfig@1.1",
+    name: "vendor.qti.ims.rcsconfig@1.1_vendor",
+    stem: "vendor.qti.ims.rcsconfig@1.1",
     owner: "motorola",
     strip: {
         none: true,
@@ -8239,7 +10101,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/vendor.qti.ims.rcsconfig@1.1.so",
             ],
             shared_libs: [
-                "vendor.qti.ims.rcsconfig@1.0",
+                "vendor.qti.ims.rcsconfig@1.0_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -8257,7 +10119,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.ims.rcsconfig@2.0",
+    name: "vendor.qti.ims.rcsconfig@2.0_vendor",
+    stem: "vendor.qti.ims.rcsconfig@2.0",
     owner: "motorola",
     strip: {
         none: true,
@@ -8285,7 +10148,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.ims.rcsconfig@2.1",
+    name: "vendor.qti.ims.rcsconfig@2.1_vendor",
+    stem: "vendor.qti.ims.rcsconfig@2.1",
     owner: "motorola",
     strip: {
         none: true,
@@ -8296,7 +10160,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/vendor.qti.ims.rcsconfig@2.1.so",
             ],
             shared_libs: [
-                "vendor.qti.ims.rcsconfig@2.0",
+                "vendor.qti.ims.rcsconfig@2.0_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -8314,7 +10178,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.ims.rcssip@1.0",
+    name: "vendor.qti.ims.rcssip@1.0_vendor",
+    stem: "vendor.qti.ims.rcssip@1.0",
     owner: "motorola",
     strip: {
         none: true,
@@ -8342,7 +10207,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.ims.rcssip@1.1",
+    name: "vendor.qti.ims.rcssip@1.1_vendor",
+    stem: "vendor.qti.ims.rcssip@1.1",
     owner: "motorola",
     strip: {
         none: true,
@@ -8353,7 +10219,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/vendor.qti.ims.rcssip@1.1.so",
             ],
             shared_libs: [
-                "vendor.qti.ims.rcssip@1.0",
+                "vendor.qti.ims.rcssip@1.0_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -8371,7 +10237,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.ims.rcssip@1.2",
+    name: "vendor.qti.ims.rcssip@1.2_vendor",
+    stem: "vendor.qti.ims.rcssip@1.2",
     owner: "motorola",
     strip: {
         none: true,
@@ -8382,8 +10249,8 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/vendor.qti.ims.rcssip@1.2.so",
             ],
             shared_libs: [
-                "vendor.qti.ims.rcssip@1.0",
-                "vendor.qti.ims.rcssip@1.1",
+                "vendor.qti.ims.rcssip@1.0_vendor",
+                "vendor.qti.ims.rcssip@1.1_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -8401,7 +10268,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.ims.rcsuce@1.0",
+    name: "vendor.qti.ims.rcsuce@1.0_vendor",
+    stem: "vendor.qti.ims.rcsuce@1.0",
     owner: "motorola",
     strip: {
         none: true,
@@ -8429,7 +10297,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.ims.rcsuce@1.1",
+    name: "vendor.qti.ims.rcsuce@1.1_vendor",
+    stem: "vendor.qti.ims.rcsuce@1.1",
     owner: "motorola",
     strip: {
         none: true,
@@ -8440,7 +10309,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/vendor.qti.ims.rcsuce@1.1.so",
             ],
             shared_libs: [
-                "vendor.qti.ims.rcsuce@1.0",
+                "vendor.qti.ims.rcsuce@1.0_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -8458,7 +10327,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.ims.rcsuce@1.2",
+    name: "vendor.qti.ims.rcsuce@1.2_vendor",
+    stem: "vendor.qti.ims.rcsuce@1.2",
     owner: "motorola",
     strip: {
         none: true,
@@ -8469,8 +10339,8 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/vendor.qti.ims.rcsuce@1.2.so",
             ],
             shared_libs: [
-                "vendor.qti.ims.rcsuce@1.0",
-                "vendor.qti.ims.rcsuce@1.1",
+                "vendor.qti.ims.rcsuce@1.0_vendor",
+                "vendor.qti.ims.rcsuce@1.1_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -8550,7 +10420,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.latency@2.0",
+    name: "vendor.qti.latency@2.0_vendor",
+    stem: "vendor.qti.latency@2.0",
     owner: "motorola",
     strip: {
         none: true,
@@ -8578,7 +10449,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.latency@2.1",
+    name: "vendor.qti.latency@2.1_vendor",
+    stem: "vendor.qti.latency@2.1",
     owner: "motorola",
     strip: {
         none: true,
@@ -8589,7 +10461,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/vendor.qti.latency@2.1.so",
             ],
             shared_libs: [
-                "vendor.qti.latency@2.0",
+                "vendor.qti.latency@2.0_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -8732,526 +10604,24 @@ prebuilt_rfsa {
     soc_specific: true,
 }
 
-cc_prebuilt_library_shared {
-    name: "com.qualcomm.qti.dpm.api@1.0",
+android_app_import {
+    name: "CACertService",
     owner: "motorola",
-    strip: {
-        none: true,
+    apk: "proprietary/vendor/app/CACertService/CACertService.apk",
+    certificate: "platform",
+    dex_preopt: {
+        enabled: false,
     },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/com.qualcomm.qti.dpm.api@1.0.so",
-            ],
-            shared_libs: [
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "fm_helium",
-    owner: "motorola",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/fm_helium.so",
-            ],
-            shared_libs: [
-                "libfm-hci",
-                "liblog",
-                "libnativehelper",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "lib-imsvideocodec",
-    owner: "motorola",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/lib-imsvideocodec.so",
-            ],
-            shared_libs: [
-                "lib-imsvtutils",
-                "lib-imsvtextutils",
-                "libcutils",
-                "libutils",
-                "liblog",
-                "libdiag_system",
-                "libgui",
-                "libandroid",
-                "libnativewindow",
-                "libmediandk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "lib-imsvt",
-    owner: "motorola",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/lib-imsvt.so",
-            ],
-            shared_libs: [
-                "lib-imsvideocodec",
-                "libmediandk",
-                "libnativewindow",
-                "libion",
-                "libdmabufheap",
-                "lib-imsvtutils",
-                "libandroid",
-                "libhidlbase",
-                "vendor.qti.imsrtpservice@3.0",
-                "vendor.qti.imsrtpservice@3.1",
-                "libdiag_system",
-                "libcutils",
-                "libutils",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "lib-imsvtextutils",
-    owner: "motorola",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/lib-imsvtextutils.so",
-            ],
-            shared_libs: [
-                "libutils",
-                "libcutils",
-                "liblog",
-                "libdiag_system",
-                "lib-imsvtutils",
-                "libGLESv2",
-                "libEGL",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "lib-imsvtutils",
-    owner: "motorola",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/lib-imsvtutils.so",
-            ],
-            shared_libs: [
-                "libutils",
-                "libcutils",
-                "liblog",
-                "libdiag_system",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libdiag_system",
-    owner: "motorola",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/libdiag_system.so",
-            ],
-            shared_libs: [
-                "vendor.qti.diaghal@1.0",
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "android.hidl.allocator@1.0",
-                "android.hidl.memory@1.0",
-                "libhidlmemory",
-                "libc",
-                "libcutils",
-                "libc++",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libdpmctmgr",
-    owner: "motorola",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/libdpmctmgr.so",
-            ],
-            shared_libs: [
-                "libdiag_system",
-                "libbinder",
-                "libcutils",
-                "libutils",
-                "libdpmframework",
-                "com.qualcomm.qti.dpm.api@1.0",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libdpmfdmgr",
-    owner: "motorola",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/libdpmfdmgr.so",
-            ],
-            shared_libs: [
-                "libdiag_system",
-                "libbinder",
-                "libcutils",
-                "libutils",
-                "libdpmframework",
-                "com.qualcomm.qti.dpm.api@1.0",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libdpmframework",
-    owner: "motorola",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/libdpmframework.so",
-            ],
-            shared_libs: [
-                "libdiag_system",
-                "libbinder",
-                "libcutils",
-                "libutils",
-                "liblog",
-                "libhidlbase",
-                "libhardware",
-                "libhardware_legacy",
-                "com.qualcomm.qti.dpm.api@1.0",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libdpmtcm",
-    owner: "motorola",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/libdpmtcm.so",
-            ],
-            shared_libs: [
-                "libdiag_system",
-                "libbinder",
-                "libcutils",
-                "libutils",
-                "libdpmframework",
-                "com.qualcomm.qti.dpm.api@1.0",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libfm-hci",
-    owner: "motorola",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/libfm-hci.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "libbase",
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "vendor.qti.hardware.fm@1.0",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libimscamera_jni",
-    owner: "motorola",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/libimscamera_jni.so",
-            ],
-            shared_libs: [
-                "libnativehelper",
-                "libcutils",
-                "libutils",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libimsmedia_jni",
-    owner: "motorola",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/libimsmedia_jni.so",
-            ],
-            shared_libs: [
-                "libnativehelper",
-                "libcutils",
-                "libutils",
-                "libgui",
-                "libbinder",
-                "liblog",
-                "libandroid",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.diaghal@1.0",
-    owner: "motorola",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/vendor.qti.diaghal@1.0.so",
-            ],
-            shared_libs: [
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.imsrtpservice@3.0",
-    owner: "motorola",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/vendor.qti.imsrtpservice@3.0.so",
-            ],
-            shared_libs: [
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.imsrtpservice@3.1",
-    owner: "motorola",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/vendor.qti.imsrtpservice@3.1.so",
-            ],
-            shared_libs: [
-                "vendor.qti.imsrtpservice@3.0",
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
+    soc_specific: true,
 }
 
 android_app_import {
     name: "CneApp",
     owner: "motorola",
     apk: "proprietary/vendor/app/CneApp/CneApp.apk",
+    required: [
+        "CneApp.libvndfwk_detect_jni.qti_symlink",
+    ],
     certificate: "platform",
     dex_preopt: {
         enabled: false,
@@ -9281,224 +10651,11 @@ android_app_import {
     soc_specific: true,
 }
 
-android_app_import {
-    name: "uimgbaservice",
-    owner: "motorola",
-    apk: "proprietary/product/app/uimgbaservice/uimgbaservice.apk",
-    certificate: "platform",
-    dex_preopt: {
-        enabled: false,
-    },
-    product_specific: true,
-}
-
-android_app_import {
-    name: "ImsRcsService",
-    owner: "motorola",
-    apk: "proprietary/system_ext/app/ImsRcsService/ImsRcsService.apk",
-    certificate: "platform",
-    dex_preopt: {
-        enabled: false,
-    },
-    system_ext_specific: true,
-}
-
-android_app_import {
-    name: "QtiTelephonyService",
-    owner: "motorola",
-    apk: "proprietary/system_ext/app/QtiTelephonyService/QtiTelephonyService.apk",
-    certificate: "platform",
-    dex_preopt: {
-        enabled: false,
-    },
-    system_ext_specific: true,
-}
-
-android_app_import {
-    name: "dpmserviceapp",
-    owner: "motorola",
-    apk: "proprietary/system_ext/priv-app/dpmserviceapp/dpmserviceapp.apk",
-    certificate: "platform",
-    dex_preopt: {
-        enabled: false,
-    },
-    privileged: true,
-    system_ext_specific: true,
-}
-
-android_app_import {
-    name: "ims",
-    owner: "motorola",
-    apk: "proprietary/system_ext/priv-app/ims/ims.apk",
-    certificate: "platform",
-    dex_preopt: {
-        enabled: false,
-    },
-    privileged: true,
-    system_ext_specific: true,
-}
-
-android_app_import {
-    name: "qcrilmsgtunnel",
-    owner: "motorola",
-    apk: "proprietary/system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk",
-    certificate: "platform",
-    dex_preopt: {
-        enabled: false,
-    },
-    privileged: true,
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "uimgbalibrary",
-    owner: "motorola",
-    jars: [
-        "proprietary/product/framework/uimgbalibrary.jar",
-    ],
-    product_specific: true,
-}
-
-dex_import {
-    name: "uimgbamanagerlibrary",
-    owner: "motorola",
-    jars: [
-        "proprietary/product/framework/uimgbamanagerlibrary.jar",
-    ],
-    product_specific: true,
-}
-
-dex_import {
-    name: "uimservicelibrary",
-    owner: "motorola",
-    jars: [
-        "proprietary/product/framework/uimservicelibrary.jar",
-    ],
-    product_specific: true,
-}
-
-dex_import {
-    name: "com.qti.dpmframework",
-    owner: "motorola",
-    jars: [
-        "proprietary/system_ext/framework/com.qti.dpmframework.jar",
-    ],
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "dpmapi",
-    owner: "motorola",
-    jars: [
-        "proprietary/system_ext/framework/dpmapi.jar",
-    ],
-    system_ext_specific: true,
-}
-
 dex_import {
     name: "moto-telephony",
     owner: "motorola",
     jars: [
         "proprietary/system_ext/framework/moto-telephony.jar",
-    ],
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "qcrilhook",
-    owner: "motorola",
-    jars: [
-        "proprietary/system_ext/framework/qcrilhook.jar",
-    ],
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "vendor.qti.ims.connection-V1.0-java",
-    owner: "motorola",
-    jars: [
-        "proprietary/system_ext/framework/vendor.qti.ims.connection-V1.0-java.jar",
-    ],
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "vendor.qti.ims.factory-V2.0-java",
-    owner: "motorola",
-    jars: [
-        "proprietary/system_ext/framework/vendor.qti.ims.factory-V2.0-java.jar",
-    ],
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "vendor.qti.ims.factory-V2.1-java",
-    owner: "motorola",
-    jars: [
-        "proprietary/system_ext/framework/vendor.qti.ims.factory-V2.1-java.jar",
-    ],
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "vendor.qti.ims.factory-V2.2-java",
-    owner: "motorola",
-    jars: [
-        "proprietary/system_ext/framework/vendor.qti.ims.factory-V2.2-java.jar",
-    ],
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "vendor.qti.ims.rcssip-V1.0-java",
-    owner: "motorola",
-    jars: [
-        "proprietary/system_ext/framework/vendor.qti.ims.rcssip-V1.0-java.jar",
-    ],
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "vendor.qti.ims.rcssip-V1.1-java",
-    owner: "motorola",
-    jars: [
-        "proprietary/system_ext/framework/vendor.qti.ims.rcssip-V1.1-java.jar",
-    ],
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "vendor.qti.ims.rcssip-V1.2-java",
-    owner: "motorola",
-    jars: [
-        "proprietary/system_ext/framework/vendor.qti.ims.rcssip-V1.2-java.jar",
-    ],
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "vendor.qti.ims.rcsuce-V1.0-java",
-    owner: "motorola",
-    jars: [
-        "proprietary/system_ext/framework/vendor.qti.ims.rcsuce-V1.0-java.jar",
-    ],
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "vendor.qti.ims.rcsuce-V1.1-java",
-    owner: "motorola",
-    jars: [
-        "proprietary/system_ext/framework/vendor.qti.ims.rcsuce-V1.1-java.jar",
-    ],
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "vendor.qti.ims.rcsuce-V1.2-java",
-    owner: "motorola",
-    jars: [
-        "proprietary/system_ext/framework/vendor.qti.ims.rcsuce-V1.2-java.jar",
     ],
     system_ext_specific: true,
 }
@@ -9509,6 +10666,44 @@ prebuilt_etc_xml {
     src: "proprietary/vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml",
     filename_from_src: true,
     sub_dir: "vintf/manifest",
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "ATFWD-daemon",
+    owner: "motorola",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/ATFWD-daemon",
+            ],
+            shared_libs: [
+                "libcutils",
+                "libutils",
+                "libqmi_cci",
+                "libqmi",
+                "libmdmdetect",
+                "libqmi_client_qmux",
+                "libqmi_client_helper",
+                "libqmiservices",
+                "liblog",
+                "libavservices_minijail",
+                "libqmi_common_so",
+                "libbase",
+                "libhidlbase",
+                "vendor.qti.hardware.radio.atcmdfwd@1.0_vendor",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
     soc_specific: true,
 }
 
@@ -9617,17 +10812,17 @@ cc_prebuilt_binary {
                 "libqmiservices",
                 "libhidlbase",
                 "libandroid_net",
-                "vendor.qti.hardware.data.cne.internal.api@1.0",
-                "vendor.qti.hardware.data.cne.internal.constants@1.0",
-                "vendor.qti.hardware.data.cne.internal.server@1.0",
-                "vendor.qti.hardware.data.latency@1.0",
-                "vendor.qti.data.factory@2.0",
-                "vendor.qti.data.factory@2.1",
-                "vendor.qti.data.factory@2.2",
-                "vendor.qti.data.factory@2.3",
-                "vendor.qti.latency@2.0",
-                "vendor.qti.latency@2.1",
-                "vendor.qti.hardware.mwqemadapter@1.0",
+                "vendor.qti.hardware.data.cne.internal.api@1.0_vendor",
+                "vendor.qti.hardware.data.cne.internal.constants@1.0_vendor",
+                "vendor.qti.hardware.data.cne.internal.server@1.0_vendor",
+                "vendor.qti.hardware.data.latency@1.0_vendor",
+                "vendor.qti.data.factory@2.0_vendor",
+                "vendor.qti.data.factory@2.1_vendor",
+                "vendor.qti.data.factory@2.2_vendor",
+                "vendor.qti.data.factory@2.3_vendor",
+                "vendor.qti.latency@2.0_vendor",
+                "vendor.qti.latency@2.1_vendor",
+                "vendor.qti.hardware.mwqemadapter@1.0_vendor",
                 "libc++",
                 "libc",
                 "libm",
@@ -9711,17 +10906,23 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
-    name: "hvdcp_opti",
+    name: "embmsslServer",
     owner: "motorola",
     target: {
         android_arm64: {
             srcs: [
-                "proprietary/vendor/bin/hvdcp_opti",
+                "proprietary/vendor/bin/embmsslServer",
             ],
             shared_libs: [
-                "libcutils",
-                "libutils",
+                "libembmsservice",
                 "liblog",
+                "libutils",
+                "libhidlbase",
+                "vendor.qti.hardware.embmssl@1.0_vendor",
+                "vendor.qti.hardware.embmssl@1.1_vendor",
+                "libqmiservices",
+                "libqmi_cci",
+                "libqmi_encdec",
                 "libc++",
                 "libc",
                 "libm",
@@ -9932,37 +11133,6 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
-    name: "vendor.qti.hardware.sensorscalibrate@1.0-service",
-    owner: "motorola",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/bin/hw/vendor.qti.hardware.sensorscalibrate@1.0-service",
-            ],
-            shared_libs: [
-                "liblog",
-                "libcutils",
-                "libbase",
-                "libutils",
-                "libhidlbase",
-                "vendor.qti.hardware.sensorscalibrate@1.0",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    relative_install_path: "hw",
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
     name: "vendor.qti.hardware.soter@1.0-service",
     owner: "motorola",
     target: {
@@ -10046,8 +11216,8 @@ cc_prebuilt_binary {
                 "libcutils",
                 "libutils",
                 "lib-imscommon",
-                "vendor.qti.ims.factory@2.0",
-                "vendor.qti.ims.factory@2.1",
+                "vendor.qti.ims.factory@2.0_vendor",
+                "vendor.qti.ims.factory@2.1_vendor",
                 "libc++",
                 "libc",
                 "libm",
@@ -10064,35 +11234,81 @@ cc_prebuilt_binary {
 }
 
 sh_binary {
-    name: "init.qcom.sensors",
+    name: "init.qti.qcv",
     owner: "motorola",
-    src: "proprietary/vendor/bin/init.qcom.sensors.sh",
-    filename: "init.qcom.sensors.sh",
-    soc_specific: true,
-}
-
-sh_binary {
-    name: "init.qti.chg_policy",
-    owner: "motorola",
-    src: "proprietary/vendor/bin/init.qti.chg_policy.sh",
-    filename: "init.qti.chg_policy.sh",
+    src: "proprietary/vendor/bin/init.qti.qcv.sh",
+    filename: "init.qti.qcv.sh",
     soc_specific: true,
 }
 
 cc_prebuilt_binary {
-    name: "ks",
+    name: "ipacm-diag",
     owner: "motorola",
     target: {
         android_arm64: {
             srcs: [
-                "proprietary/vendor/bin/ks",
+                "proprietary/vendor/bin/ipacm-diag",
             ],
             shared_libs: [
-                "libc",
+                "libdiag",
                 "libcutils",
-                "libutils",
                 "liblog",
                 "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "irsc_util",
+    owner: "motorola",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/irsc_util",
+            ],
+            shared_libs: [
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "loadalgo",
+    owner: "motorola",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/loadalgo",
+            ],
+            shared_libs: [
+                "libutils",
+                "libQSEEComAPI",
+                "libion",
+                "libloadalgo_stub",
+                "liblog",
+                "libc++",
+                "libc",
                 "libm",
                 "libdl",
             ],
@@ -10233,7 +11449,6 @@ cc_prebuilt_binary {
                 "libqmi_common_so",
                 "libqmi_encdec",
                 "libqmi_csi",
-                "libadropbox",
                 "libc++",
                 "libc",
                 "libm",
@@ -10419,6 +11634,32 @@ cc_prebuilt_binary {
         },
     },
     compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "qrtr-lookup",
+    owner: "motorola",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/qrtr-lookup",
+            ],
+            shared_libs: [
+                "libqrtr",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
     strip: {
         none: true,
     },
@@ -10444,6 +11685,7 @@ cc_prebuilt_binary {
         },
     },
     compile_multilib: "64",
+    check_elf_files: false,
     strip: {
         none: true,
     },
@@ -10512,6 +11754,22 @@ cc_prebuilt_binary {
         none: true,
     },
     prefer: true,
+    soc_specific: true,
+}
+
+sh_binary {
+    name: "qtigetprop",
+    owner: "motorola",
+    src: "proprietary/vendor/bin/qtigetprop",
+    filename: "qtigetprop",
+    soc_specific: true,
+}
+
+sh_binary {
+    name: "qtisetprop",
+    owner: "motorola",
+    src: "proprietary/vendor/bin/qtisetprop",
+    filename: "qtisetprop",
     soc_specific: true,
 }
 
@@ -10602,6 +11860,90 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
+    name: "ssr_diag",
+    owner: "motorola",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/ssr_diag",
+            ],
+            shared_libs: [
+                "libdiag",
+                "libcutils",
+                "libutils",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "ssr_setup",
+    owner: "motorola",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/ssr_setup",
+            ],
+            shared_libs: [
+                "libcutils",
+                "libutils",
+                "libmdmdetect",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "subsystem_ramdump",
+    owner: "motorola",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/subsystem_ramdump",
+            ],
+            shared_libs: [
+                "libmdmdetect",
+                "libcutils",
+                "libutils",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
     name: "tftp_server",
     owner: "motorola",
     target: {
@@ -10621,6 +11963,7 @@ cc_prebuilt_binary {
         },
     },
     compile_multilib: "64",
+    check_elf_files: false,
     strip: {
         none: true,
     },
@@ -10657,21 +12000,21 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
-    name: "dpmd",
+    name: "tloc_daemon",
     owner: "motorola",
     target: {
         android_arm64: {
             srcs: [
-                "proprietary/system_ext/bin/dpmd",
+                "proprietary/vendor/bin/tloc_daemon",
             ],
             shared_libs: [
-                "libdpmframework",
-                "libdiag_system",
-                "libhardware_legacy",
-                "libhidlbase",
                 "libcutils",
-                "libutils",
-                "com.qualcomm.qti.dpm.api@1.0",
+                "libQSEEComAPI",
+                "liblog",
+                "libloc_api_v02",
+                "libqsocket",
+                "libqrtr",
+                "libminkdescriptor",
                 "libc++",
                 "libc",
                 "libm",
@@ -10684,21 +12027,140 @@ cc_prebuilt_binary {
         none: true,
     },
     prefer: true,
-    system_ext_specific: true,
+    soc_specific: true,
 }
 
-install_symlink {
-    name: "system_ext_priv-app_ims_lib_arm64_libimscamera_jni_so",
-    system_ext_specific: true,
-    installed_location: "priv-app/ims/lib/arm64/libimscamera_jni.so",
-    symlink_target: "/system_ext/lib64/libimscamera_jni.so",
+cc_prebuilt_binary {
+    name: "vendor.qti.hardware.soter@1.0-provision",
+    owner: "motorola",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/vendor.qti.hardware.soter@1.0-provision",
+            ],
+            shared_libs: [
+                "libc",
+                "libcutils",
+                "liblog",
+                "libutils",
+                "libhardware",
+                "libhidlbase",
+                "vendor.qti.hardware.soter@1.0",
+                "libc++",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
 }
 
-install_symlink {
-    name: "system_ext_priv-app_ims_lib_arm64_libimsmedia_jni_so",
-    system_ext_specific: true,
-    installed_location: "priv-app/ims/lib/arm64/libimsmedia_jni.so",
-    symlink_target: "/system_ext/lib64/libimsmedia_jni.so",
+cc_prebuilt_binary {
+    name: "wfdhdcphalservice",
+    owner: "motorola",
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/bin/wfdhdcphalservice",
+            ],
+            shared_libs: [
+                "android.hardware.drm@1.0",
+                "android.hardware.drm@1.1",
+                "android.hardware.drm@1.2",
+                "android.hardware.drm@1.3",
+                "android.hidl.memory@1.0",
+                "libhidlmemory",
+                "libc++",
+                "libhidlbase",
+                "libbinder",
+                "libbase",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libwfdhdcpcp",
+                "libwfdhdcpservice_proprietary",
+                "libwfdcommonutils_proprietary",
+                "libwfdutils_proprietary",
+                "libqdMetaData",
+                "libavservices_minijail",
+                "libwfddisplayconfig_proprietary",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "wfdvndservice",
+    owner: "motorola",
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/bin/wfdvndservice",
+            ],
+            shared_libs: [
+                "libutils",
+                "liblog",
+                "libbinder",
+                "libwfdhdcpservice_proprietary",
+                "libavservices_minijail",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "wifidisplayhalservice",
+    owner: "motorola",
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/bin/wifidisplayhalservice",
+            ],
+            shared_libs: [
+                "vendor.qti.hardware.wifidisplaysession@1.0_vendor",
+                "vendor.qti.hardware.wifidisplaysessionl@1.0-halimpl",
+                "libhidlbase",
+                "libutils",
+                "liblog",
+                "libbinder",
+                "libavservices_minijail",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
 }
 
 install_symlink {
